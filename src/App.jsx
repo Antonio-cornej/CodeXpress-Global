@@ -139,70 +139,65 @@ function App() {
               </div>
             </section>
 
-            {/* Detalle del equipo: perfil + dimensiones */}
+            {/* Galería unificada del equipo */}
             <section className="wrap">
               <div className="section-head">
-                <div className="kicker">Diseño y dimensiones</div>
-                <h2>Un equipo compacto, pensado para usarse con una sola mano.</h2>
-                <p>Empuñadura ergonómica y pantalla táctil orientable, con un tamaño que cabe en cualquier caja de herramientas.</p>
+                <div className="kicker">Conoce el equipo</div>
+                <h2>Diseño, alcance y contenido, en un solo lugar.</h2>
+                <p>Desde las medidas exactas hasta lo que trae la caja al abrirla, así es el equipo que estás por sumar a tu operación.</p>
               </div>
-              <div className="device-detail">
-                <div className="device-photo">
-                  <img src={perfilImg} alt="Vista de perfil de la impresora portátil" />
-                </div>
-                <div className="device-specs">
-                  <img className="device-diagram" src={dimensionesImg} alt="Diagrama de dimensiones de la impresora: 48mm de ancho, 130mm de largo, 215mm de alto" />
-                  <ul className="spec-list">
-                    <li><strong>Ancho</strong><span>48 mm</span></li>
-                    <li><strong>Largo</strong><span>130 mm</span></li>
-                    <li><strong>Alto</strong><span>215 mm</span></li>
-                    <li><strong>Pantalla</strong><span>4.3" táctil</span></li>
-                  </ul>
-                </div>
-              </div>
-            </section>
 
-            {/* Idiomas + usos + materiales */}
-            <section className="wrap">
-              <div className="section-head">
-                <div className="kicker">Versatilidad</div>
-                <h2>Un solo equipo, múltiples superficies e idiomas.</h2>
-                <p>Sistema multilingüe con 28 idiomas disponibles, e impresión validada sobre los materiales más comunes en producción y logística.</p>
+              <div className="spec-strip">
+                <div><strong>48 mm</strong><span>Ancho</span></div>
+                <div><strong>130 mm</strong><span>Largo</span></div>
+                <div><strong>215 mm</strong><span>Alto</span></div>
+                <div><strong>4.3"</strong><span>Pantalla táctil</span></div>
+                <div><strong>28</strong><span>Idiomas</span></div>
               </div>
-              <div className="uses-grid">
-                <div className="uses-card">
-                  <img src={idiomasImg} alt="Interfaz de la impresora disponible en múltiples idiomas" />
-                  <h3>28 idiomas disponibles</h3>
-                  <p>Interfaz simple, pensada para equipos de trabajo de distintas nacionalidades.</p>
-                </div>
-                <div className="uses-card">
-                  <img src={usosImg} alt="Ejemplos de superficies compatibles: plástico, papel, vidrio, metal, cartón y tuberías" />
-                  <h3>Imprime sobre casi todo</h3>
-                  <p>Plástico, vidrio, metal, papel, cartón y tuberías de agua, entre otras superficies.</p>
-                </div>
-              </div>
-              <div className="materials-strip">
-                <img src={materialesImg} alt="Ejemplos reales de impresión sobre tapas, bolsas, etiquetas, cartón, logos y empaques" />
-              </div>
-            </section>
 
-            {/* Qué incluye la caja */}
-            <section className="wrap">
-              <div className="section-head">
-                <div className="kicker">Qué incluye</div>
-                <h2>Listo para usar apenas lo desempacas.</h2>
-                <p>Cada equipo llega con todo lo necesario para partir a imprimir el mismo día.</p>
-              </div>
-              <div className="unbox-grid">
-                <div className="unbox-photo">
-                  <img src={unboxingImg} alt="Contenido de la caja: impresora, cargador, cable USB, base de limpieza y manual" />
-                </div>
-                <ul className="unbox-list">
-                  <li>Impresora de inyección de tinta portátil</li>
-                  <li>Cargador y cable USB</li>
-                  <li>Base y líquido de limpieza</li>
-                  <li>Manual de usuario</li>
-                </ul>
+              <div className="gallery-grid">
+                <figure className="media-card">
+                  <div className="media"><img src={perfilImg} alt="Vista de perfil de la impresora portátil" /></div>
+                  <figcaption>
+                    <h3>Diseño ergonómico</h3>
+                    <p>Empuñadura pensada para usarse con una sola mano durante toda la jornada.</p>
+                  </figcaption>
+                </figure>
+                <figure className="media-card">
+                  <div className="media media-contain"><img src={dimensionesImg} alt="Diagrama de dimensiones de la impresora" /></div>
+                  <figcaption>
+                    <h3>Medidas exactas</h3>
+                    <p>Compacta y liviana, cabe en cualquier caja de herramientas.</p>
+                  </figcaption>
+                </figure>
+                <figure className="media-card">
+                  <div className="media media-contain"><img src={idiomasImg} alt="Interfaz de la impresora disponible en múltiples idiomas" /></div>
+                  <figcaption>
+                    <h3>28 idiomas</h3>
+                    <p>Interfaz simple para equipos de trabajo de distintas nacionalidades.</p>
+                  </figcaption>
+                </figure>
+                <figure className="media-card">
+                  <div className="media media-contain"><img src={usosImg} alt="Ejemplos de superficies compatibles: plástico, papel, vidrio, metal, cartón y tuberías" /></div>
+                  <figcaption>
+                    <h3>Imprime sobre casi todo</h3>
+                    <p>Plástico, vidrio, metal, papel, cartón y tuberías, entre otras superficies.</p>
+                  </figcaption>
+                </figure>
+                <figure className="media-card">
+                  <div className="media media-contain"><img src={materialesImg} alt="Ejemplos reales de impresión sobre tapas, bolsas, etiquetas, cartón, logos y empaques" /></div>
+                  <figcaption>
+                    <h3>Resultados reales</h3>
+                    <p>Nítida en tapas, bolsas, etiquetas, cartón, logos y empaques.</p>
+                  </figcaption>
+                </figure>
+                <figure className="media-card">
+                  <div className="media"><img src={unboxingImg} alt="Contenido de la caja: impresora, cargador, cable USB, base de limpieza y manual" /></div>
+                  <figcaption>
+                    <h3>Qué incluye</h3>
+                    <p>Impresora, cargador, cable USB, base y líquido de limpieza, y manual.</p>
+                  </figcaption>
+                </figure>
               </div>
             </section>
 
