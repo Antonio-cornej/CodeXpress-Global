@@ -18,7 +18,7 @@ body{
   -webkit-font-smoothing:antialiased;
 }
 h1,h2,h3{font-family:'Poppins', 'Segoe UI', sans-serif; font-weight:700; letter-spacing:.2px; color:var(--text-dark);}
-.wrap{width:100%; max-width:1600px; margin:0 auto; padding:0 48px; box-sizing:border-box;}
+.wrap{width:100%; margin:0 auto; padding:0 48px; box-sizing:border-box;}
 
 .nav{
   position:sticky; top:0; z-index:50;
@@ -27,7 +27,7 @@ h1,h2,h3{font-family:'Poppins', 'Segoe UI', sans-serif; font-weight:700; letter-
   width:100%;
 }
 .nav-inner{
-  width:100%; max-width:1600px; margin:0 auto; padding:18px 48px;
+  width:100%; margin:0 auto; padding:18px 48px;
   display:flex; align-items:center; justify-content:space-between;
   box-sizing:border-box;
 }
@@ -101,9 +101,9 @@ h1,h2,h3{font-family:'Poppins', 'Segoe UI', sans-serif; font-weight:700; letter-
 .dot{width:9px; height:9px; border-radius:50%; border:none; background:rgba(255,255,255,.4); cursor:pointer; padding:0;}
 .dot.active{background:var(--orange);}
 
-section{padding:88px 0; position:relative; width:100%; box-sizing:border-box;}
+section{padding:112px 0; position:relative; width:100%; box-sizing:border-box;}
 section + section{border-top:1px solid var(--line);}
-.hero + section{padding-top:104px;}
+.hero + section{padding-top:120px;}
 
 .section-head{max-width:64ch; margin:0 auto 52px; padding-bottom:28px; border-bottom:1px solid var(--line); text-align:center;}
 .section-head .kicker{color:var(--orange-dark); font-size:.85rem; text-transform:uppercase; letter-spacing:1.2px; margin-bottom:10px; font-weight:700;}
