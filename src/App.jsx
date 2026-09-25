@@ -77,6 +77,32 @@ function App() {
               </div>
             </section>
 
+            <div className="trust-bar">
+              <div className="wrap trust-inner">
+                <div className="trust-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><path d="M12 3l7 3v6c0 4.5-3 8-7 9-4-1-7-4.5-7-9V6l7-3z" /><path d="M9 12l2 2 4-4" /></svg>
+                  <div>
+                    <strong>3 años de garantía</strong>
+                    <span>Respaldo real en cada equipo que vendemos.</span>
+                  </div>
+                </div>
+                <div className="trust-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><rect x="3" y="7" width="18" height="13" rx="2" /><path d="M3 7l9-4 9 4" /><path d="M12 12v8" /></svg>
+                  <div>
+                    <strong>Insumos disponibles</strong>
+                    <span>Cartuchos y consumibles listos en Chile, sin depender del extranjero.</span>
+                  </div>
+                </div>
+                <div className="trust-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><path d="M14.7 6.3a4 4 0 0 1-5.4 5.4L4 17v3h3l5.3-5.3a4 4 0 0 1 5.4-5.4z" /></svg>
+                  <div>
+                    <strong>Servicio técnico</strong>
+                    <span>Soporte antes y después de la compra, con asesoría local.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             <section className="wrap">
               <div className="section-head">
                 <div className="kicker">Ficha técnica</div>
@@ -170,16 +196,16 @@ function App() {
               </div>
               <div className="values">
                 <div className="value">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><circle cx="12" cy="12" r="9" /><path d="M9 12l2 2 4-4" /></svg>
-                  <div><h3>Calidad garantizada</h3><p>Equipos probados para uso industrial continuo, con respaldo técnico real.</p></div>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><path d="M12 3l7 3v6c0 4.5-3 8-7 9-4-1-7-4.5-7-9V6l7-3z" /><path d="M9 12l2 2 4-4" /></svg>
+                  <div><h3>3 años de garantía</h3><p>Respaldo real en cada equipo, no solo en el momento de la venta.</p></div>
                 </div>
                 <div className="value">
-                  <LogoIcon width="22" height="22" />
-                  <div><h3>Uso versátil</h3><p>Compatible con plástico, vidrio, aleaciones y tuberías de acero.</p></div>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><rect x="3" y="7" width="18" height="13" rx="2" /><path d="M3 7l9-4 9 4" /><path d="M12 12v8" /></svg>
+                  <div><h3>Insumos disponibles en Chile</h3><p>Cartuchos y consumibles sin depender de compras al extranjero.</p></div>
                 </div>
                 <div className="value">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><path d="M4 20V10l8-6 8 6v10" /><path d="M9 20v-6h6v6" /></svg>
-                  <div><h3>Trato cercano</h3><p>Asesoría personalizada según tu tipo de producción y superficie a marcar.</p></div>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><path d="M14.7 6.3a4 4 0 0 1-5.4 5.4L4 17v3h3l5.3-5.3a4 4 0 0 1 5.4-5.4z" /></svg>
+                  <div><h3>Servicio técnico</h3><p>Asesoría personalizada antes y después de la compra, con soporte local.</p></div>
                 </div>
               </div>
             </div>
