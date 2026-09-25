@@ -123,7 +123,7 @@ function App() {
                 <div className="product-card">
                   <img src={printerImg} alt="Impresora portátil Yaomatec" />
                   <div className="product-info">
-                    <h3>Impresora de inyección de tinta portátil Yaomatec</h3>
+                    <h3>Impresora de inyección de tinta portátil</h3>
                     <p>
                       Equipo portátil para marcar fechas de vencimiento, códigos QR, códigos
                       de barra y logotipos sobre botellas plásticas, vidrio, piezas metálicas
@@ -136,7 +136,7 @@ function App() {
                 <div className="product-card">
                   <img src={cartridgeImg} alt="Cartucho de tinta Yaomatec W3T10B" />
                   <div className="product-info">
-                    <h3>Cartucho de tinta Yaomatec W3T10B</h3>
+                    <h3>Cartucho de tinta</h3>
                     <p>
                       Cartucho compatible con la línea de impresoras portátiles Yaomatec,
                       formulado para alta adherencia y secado rápido. Tinta eco-solvente,
@@ -201,7 +201,7 @@ function App() {
             <ul className="info-list">
               <li>
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.4 2.1L8.1 9.7a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.4c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2.2z" /></svg>
-                <div><strong>Teléfono</strong>+56 9 1234 5678</div>
+                <div><strong>Teléfono</strong>+56 9 9892 0709</div>
               </li>
               <li>
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><path d="M4 4h16v16H4z" /><path d="M4 6l8 7 8-7" /></svg>
