@@ -103,7 +103,16 @@ h1,h2,h3{font-family:'Poppins', 'Segoe UI', sans-serif; font-weight:700; letter-
 
 section{padding:112px 0; position:relative; width:100%; box-sizing:border-box;}
 section + section{border-top:1px solid var(--line);}
-.hero + section{padding-top:120px;}
+.hero + .trust-bar{margin-top:0;}
+.trust-bar{
+  width:100%; background:var(--white); border-bottom:1px solid var(--line);
+  padding:36px 0;
+}
+.trust-inner{display:grid; grid-template-columns:repeat(3,1fr); gap:32px;}
+.trust-item{display:flex; align-items:flex-start; gap:14px;}
+.trust-item svg{width:28px; height:28px; flex:none; color:var(--orange-dark); margin-top:2px;}
+.trust-item strong{display:block; font-size:1rem; color:var(--text-dark); margin-bottom:4px;}
+.trust-item span{font-size:.88rem; color:var(--text-body);}
 
 .section-head{max-width:64ch; margin:0 auto 52px; padding-bottom:28px; border-bottom:1px solid var(--line); text-align:center;}
 .section-head .kicker{color:var(--orange-dark); font-size:.85rem; text-transform:uppercase; letter-spacing:1.2px; margin-bottom:10px; font-weight:700;}
@@ -184,7 +193,9 @@ footer{padding:26px 0; border-top:1px solid var(--line); background:var(--dark);
   .hero-dots{position:static; margin-top:16px; transform:none;}
 
   section{padding:52px 0;}
-  .hero + section{padding-top:64px;}
+
+  .trust-inner{grid-template-columns:1fr; gap:20px;}
+  .trust-bar{padding:28px 0;}
   .section-head h2{font-size:1.5rem;}
 
   .cats{grid-template-columns:1fr;}
