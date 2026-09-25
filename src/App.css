@@ -20,6 +20,20 @@ body{
 h1,h2,h3{font-family:'Poppins', 'Segoe UI', sans-serif; font-weight:700; letter-spacing:.2px; color:var(--text-dark);}
 .wrap{width:100%; margin:0 auto; padding:0 48px; box-sizing:border-box;}
 
+@media (min-width:1800px){
+  .wrap{max-width:1760px; padding:0 64px;}
+  .nav-inner{max-width:1760px; padding:18px 64px;}
+  .hero h1{font-size:3.9rem;}
+  .cats{grid-template-columns:repeat(4,1fr);}
+  .products{grid-template-columns:repeat(2,1fr); gap:56px;}
+}
+@media (min-width:2400px){
+  .wrap{max-width:2100px;}
+  .nav-inner{max-width:2100px;}
+  .hero{min-height:720px;}
+  .hero h1{font-size:4.4rem;}
+}
+
 .nav{
   position:sticky; top:0; z-index:50;
   background:var(--white);
