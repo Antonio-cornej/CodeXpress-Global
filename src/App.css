@@ -103,8 +103,9 @@ h1,h2,h3{font-family:'Poppins', 'Segoe UI', sans-serif; font-weight:700; letter-
 
 section{padding:64px 0; position:relative; width:100%; box-sizing:border-box;}
 section + section{border-top:1px solid var(--line);}
+.hero + section{padding-top:104px;}
 
-.section-head{max-width:64ch; margin:0 auto 48px; padding-bottom:24px; border-bottom:1px solid var(--line); text-align:center;}
+.section-head{max-width:64ch; margin:0 auto 52px; padding-bottom:28px; border-bottom:1px solid var(--line); text-align:center;}
 .section-head .kicker{color:var(--orange-dark); font-size:.85rem; text-transform:uppercase; letter-spacing:1.2px; margin-bottom:10px; font-weight:700;}
 .section-head h2{font-size:2rem;}
 .section-head p{color:var(--text-body); margin-top:14px;}
@@ -183,6 +184,7 @@ footer{padding:26px 0; border-top:1px solid var(--line); background:var(--dark);
   .hero-dots{position:static; margin-top:16px; transform:none;}
 
   section{padding:40px 0;}
+  .hero + section{padding-top:64px;}
   .section-head h2{font-size:1.5rem;}
 
   .cats{grid-template-columns:1fr;}
