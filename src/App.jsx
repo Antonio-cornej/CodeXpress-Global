@@ -2,7 +2,6 @@ import { useState } from 'react'
 import './App.css'
 import printerImg from './assets/hero/printer.jpg'
 import cartridgeImg from './assets/hero/cartridge.jpg'
-import heroBg from './assets/hero/hero-background.jpg'
 
 const slides = [
   {
@@ -56,7 +55,7 @@ function App() {
       <main>
         {tab === 'inicio' && (
           <>
-            <section className="hero" style={{ backgroundImage: `url(${heroBg})` }}>
+            <section className="hero">
               <button className="hero-arrow left" onClick={prevSlide} aria-label="Anterior">‹</button>
               <button className="hero-arrow right" onClick={nextSlide} aria-label="Siguiente">›</button>
 
