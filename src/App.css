@@ -101,7 +101,7 @@ h1,h2,h3{font-family:'Poppins', 'Segoe UI', sans-serif; font-weight:700; letter-
 .dot{width:9px; height:9px; border-radius:50%; border:none; background:rgba(255,255,255,.4); cursor:pointer; padding:0;}
 .dot.active{background:var(--orange);}
 
-section{padding:64px 0; position:relative; width:100%; box-sizing:border-box;}
+section{padding:88px 0; position:relative; width:100%; box-sizing:border-box;}
 section + section{border-top:1px solid var(--line);}
 .hero + section{padding-top:104px;}
 
@@ -183,7 +183,7 @@ footer{padding:26px 0; border-top:1px solid var(--line); background:var(--dark);
   .hero-arrow.right{right:10px;}
   .hero-dots{position:static; margin-top:16px; transform:none;}
 
-  section{padding:40px 0;}
+  section{padding:52px 0;}
   .hero + section{padding-top:64px;}
   .section-head h2{font-size:1.5rem;}
 
