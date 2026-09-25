@@ -1,21 +1,23 @@
 import { useState } from 'react'
 import './App.css'
+import printerImg from './assets/printer.jpg'
+import cartridgeImg from './assets/cartridge.jpg'
 
 const slides = [
   {
-    eyebrow: 'Caza · Tiro deportivo · Seguridad',
-    title: 'Equipamiento serio para quienes se lo toman en serio.',
-    text: 'Más de 15 años asesorando a cazadores, deportistas y coleccionistas en la Región Metropolitana. Asesoría técnica, stock permanente y todos los trámites en regla.',
+    eyebrow: 'Impresión industrial portátil',
+    title: 'Marca fechas, códigos y logos donde tú necesites.',
+    text: 'Impresora de inyección de tinta portátil de 12.7mm, con batería de 8 horas. Imprime sobre plástico, vidrio, aleaciones y tuberías de acero.',
   },
   {
-    eyebrow: 'Asesoría técnica',
-    title: 'Te acompañamos en cada decisión de compra.',
-    text: 'Trabajamos solo con proveedores certificados y no vendemos nada sin la asesoría correspondiente para tu tipo de uso.',
+    eyebrow: 'Pantalla táctil de 4.3"',
+    title: 'Control simple, resultados precisos.',
+    text: 'Interfaz táctil intuitiva con soporte para 28 idiomas, pensada para uso en campo, bodegas y líneas de producción.',
   },
   {
-    eyebrow: 'Cumplimiento legal',
-    title: 'Todos los trámites en regla, sin dolores de cabeza.',
-    text: 'Te guiamos en todo el proceso ante la autoridad competente, desde tu primera compra.',
+    eyebrow: 'Resolución de 600 DPI',
+    title: 'Impresión nítida a solo 3mm de distancia.',
+    text: 'Códigos QR, códigos de barra, fechas de vencimiento, logotipos y texto variable, con la calidad que exige la industria.',
   },
 ]
 
@@ -28,15 +30,19 @@ function App() {
 
   const current = slides[slide]
 
+  const LogoIcon = (props) => (
+    <svg viewBox="0 0 24 24" fill="none" {...props}>
+      <path d="M4 9h13a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2h-6l-2 5-1.5-5H6a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2z" fill="currentColor"/>
+      <rect x="7" y="11" width="8" height="4" rx="0.5" fill="white"/>
+    </svg>
+  )
+
   return (
     <div className="site">
       <header className="nav">
         <div className="nav-inner">
           <div className="brand">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
-              <circle cx="12" cy="12" r="9" /><circle cx="12" cy="12" r="3" />
-              <path d="M12 3v4M12 17v4M3 12h4M17 12h4" />
-            </svg>
+            <LogoIcon width="26" height="26" />
             CodeXpress Global
           </div>
           <nav className="links">
@@ -72,40 +78,72 @@ function App() {
               </div>
 
               <div className="hero-badge">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
-                  <circle cx="12" cy="12" r="9" /><circle cx="12" cy="12" r="3" />
-                  <path d="M12 3v4M12 17v4M3 12h4M17 12h4" />
-                </svg>
+                <LogoIcon width="20" height="20" />
                 CodeXpress Global
               </div>
             </section>
 
             <section className="wrap">
               <div className="section-head">
-                <div className="kicker">Catálogo</div>
-                <h2>Cuatro líneas, un mismo estándar.</h2>
-                <p>Todo lo que ofrecemos pasa por control de calidad y asesoría personalizada antes de salir del local.</p>
+                <div className="kicker">Ficha técnica</div>
+                <h2>Todo lo que necesitas para codificar en terreno.</h2>
+                <p>Una impresora pensada para producción, bodega y logística, sin depender de una toma de corriente.</p>
               </div>
               <div className="cats">
                 <div className="cat">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><path d="M12 2l2.4 6.6L21 11l-6.6 2.4L12 20l-2.4-6.6L3 11l6.6-2.4z" /></svg>
-                  <h3>Caza</h3>
-                  <p>Equipos y accesorios para salidas de campo, con asesoría según terreno y presa.</p>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><rect x="6" y="2" width="12" height="20" rx="2" /><path d="M10 6h4" /></svg>
+                  <h3>Batería de 8 horas</h3>
+                  <p>Uso continuo en campo, almacenes o líneas de producción, sin conexión eléctrica constante.</p>
                 </div>
                 <div className="cat">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><circle cx="12" cy="12" r="9" /><circle cx="12" cy="12" r="5" /><circle cx="12" cy="12" r="1.4" fill="currentColor" stroke="none" /></svg>
-                  <h3>Tiro deportivo</h3>
-                  <p>Material homologado para práctica y competencia en polígonos autorizados.</p>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><rect x="3" y="5" width="18" height="14" rx="2" /><path d="M3 15h18" /></svg>
+                  <h3>Pantalla táctil 4.3"</h3>
+                  <p>Interfaz intuitiva compatible con 28 idiomas para operar en cualquier entorno.</p>
                 </div>
                 <div className="cat">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><path d="M12 3l7 3v6c0 5-3 7.5-7 9-4-1.5-7-4-7-9V6z" /></svg>
-                  <h3>Seguridad</h3>
-                  <p>Soluciones de resguardo para hogar y predio, con instalación y capacitación.</p>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><rect x="3" y="7" width="7" height="7" /><rect x="14" y="7" width="7" height="7" /><rect x="3" y="14" width="7" height="7" /></svg>
+                  <h3>QR, códigos y fechas</h3>
+                  <p>Impresión variable de códigos QR, de barra, logotipos y texto sobre distintas superficies.</p>
                 </div>
                 <div className="cat">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><rect x="4" y="4" width="16" height="16" rx="1" /><path d="M4 9h16M9 9v11" /></svg>
-                  <h3>Accesorios</h3>
-                  <p>Óptica, mantención, cajas de transporte y todo lo necesario para el cuidado del equipo.</p>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><circle cx="12" cy="12" r="9" /><path d="M9 12l2 2 4-4" /></svg>
+                  <h3>600 DPI, cartuchos libres</h3>
+                  <p>Resolución nítida a 3mm de distancia, con cartuchos de 12.7mm sin cifrado ni restricción de fabricante.</p>
+                </div>
+              </div>
+            </section>
+
+            <section className="wrap">
+              <div className="section-head">
+                <div className="kicker">Productos</div>
+                <h2>Lo que vendemos, con la calidad que exige la industria.</h2>
+                <p>Equipos y consumibles originales Yaomatec, listos para uso continuo en terreno.</p>
+              </div>
+              <div className="products">
+                <div className="product-card">
+                  <img src={printerImg} alt="Impresora portátil Yaomatec" />
+                  <div className="product-info">
+                    <h3>Impresora de inyección de tinta portátil Yaomatec</h3>
+                    <p>
+                      Equipo portátil para marcar fechas de vencimiento, códigos QR, códigos
+                      de barra y logotipos sobre botellas plásticas, vidrio, piezas metálicas
+                      y tuberías de acero. Pantalla táctil de 4.3", batería para toda la
+                      jornada y resolución de hasta 600 DPI, con impresión nítida a solo 3 mm
+                      de distancia.
+                    </p>
+                  </div>
+                </div>
+                <div className="product-card">
+                  <img src={cartridgeImg} alt="Cartucho de tinta Yaomatec W3T10B" />
+                  <div className="product-info">
+                    <h3>Cartucho de tinta Yaomatec W3T10B</h3>
+                    <p>
+                      Cartucho compatible con la línea de impresoras portátiles Yaomatec,
+                      formulado para alta adherencia y secado rápido. Tinta eco-solvente,
+                      en formato compacto de 12.7 mm, listo para instalar y sin
+                      restricciones de fabricante.
+                    </p>
+                  </div>
                 </div>
               </div>
             </section>
@@ -116,38 +154,38 @@ function App() {
           <section className="wrap">
             <div className="section-head">
               <div className="kicker">Nosotros</div>
-              <h2>Una tienda con estándares de industria.</h2>
+              <h2>Distribuidores de equipos de codificación industrial.</h2>
             </div>
             <div className="about-grid">
               <div>
                 <p>
-                  CodeXpress Global nace como una tienda especializada en el rubro de tiro
-                  deportivo, caza y coleccionismo, atendiendo a clientes particulares,
-                  clubes de tiro y entidades autorizadas.
+                  CodeXpress Global se especializa en equipos de codificación e
+                  impresión industrial portátil, para empresas de manufactura,
+                  logística y envasado que necesitan marcar sus productos en terreno.
                 </p>
                 <p>
-                  Trabajamos solo con proveedores certificados y no vendemos nada sin la
-                  asesoría correspondiente. Si es tu primera compra, te acompañamos en
-                  todo el proceso de trámites ante la autoridad competente.
+                  Trabajamos con proveedores certificados y ofrecemos asesoría técnica
+                  antes y después de la compra, incluyendo soporte para consumibles
+                  y mantención de los equipos.
                 </p>
                 <div className="stat-row">
-                  <div><strong>15</strong><span>años en el rubro</span></div>
-                  <div><strong>+20</strong><span>marcas representadas</span></div>
-                  <div><strong>100%</strong><span>trámites en regla</span></div>
+                  <div><strong>8h</strong><span>de batería continua</span></div>
+                  <div><strong>28</strong><span>idiomas soportados</span></div>
+                  <div><strong>600</strong><span>DPI de resolución</span></div>
                 </div>
               </div>
               <div className="values">
                 <div className="value">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><path d="M12 3l7 3v6c0 5-3 7.5-7 9-4-1.5-7-4-7-9V6z" /></svg>
-                  <div><h3>Todo en regla</h3><p>Asesoramos y verificamos cada trámite legal antes de cerrar una venta.</p></div>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><circle cx="12" cy="12" r="9" /><path d="M9 12l2 2 4-4" /></svg>
+                  <div><h3>Calidad garantizada</h3><p>Equipos probados para uso industrial continuo, con respaldo técnico real.</p></div>
                 </div>
                 <div className="value">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><circle cx="12" cy="12" r="9" /><path d="M9 12l2 2 4-4" /></svg>
-                  <div><h3>Asesoría real</h3><p>Nuestro equipo tiene formación técnica y experiencia de terreno, no solo de mesón.</p></div>
+                  <LogoIcon width="22" height="22" />
+                  <div><h3>Uso versátil</h3><p>Compatible con plástico, vidrio, aleaciones y tuberías de acero.</p></div>
                 </div>
                 <div className="value">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><path d="M4 20V10l8-6 8 6v10" /><path d="M9 20v-6h6v6" /></svg>
-                  <div><h3>Trato cercano</h3><p>Un servicio serio, responsable y con atención personalizada en cada visita.</p></div>
+                  <div><h3>Trato cercano</h3><p>Asesoría personalizada según tu tipo de producción y superficie a marcar.</p></div>
                 </div>
               </div>
             </div>
