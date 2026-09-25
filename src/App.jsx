@@ -41,9 +41,8 @@ function App() {
     <div className="site">
       <header className="nav">
         <div className="nav-inner">
-          <div className="brand">
-            <LogoIcon width="26" height="26" />
-            CodeXpress Global
+          <div className="nav-mark">
+            <LogoIcon width="20" height="20" />
           </div>
           <nav className="links">
             <button className={tab === 'inicio' ? 'active' : ''} onClick={() => setTab('inicio')}>Inicio</button>
@@ -56,7 +55,7 @@ function App() {
       <main>
         {tab === 'inicio' && (
           <>
-            <section className="hero">
+            <section className="hero" style={{ backgroundImage: `url(${printerImg})` }}>
               <button className="hero-arrow left" onClick={prevSlide} aria-label="Anterior">‹</button>
               <button className="hero-arrow right" onClick={nextSlide} aria-label="Siguiente">›</button>
 
@@ -75,11 +74,6 @@ function App() {
                     aria-label={`Ir a diapositiva ${i + 1}`}
                   />
                 ))}
-              </div>
-
-              <div className="hero-badge">
-                <LogoIcon width="20" height="20" />
-                CodeXpress Global
               </div>
             </section>
 
@@ -159,9 +153,9 @@ function App() {
             <div className="about-grid">
               <div>
                 <p>
-                  CodeXpress Global se especializa en equipos de codificación e
-                  impresión industrial portátil, para empresas de manufactura,
-                  logística y envasado que necesitan marcar sus productos en terreno.
+                  Nos especializamos en equipos de codificación e impresión
+                  industrial portátil, para empresas de manufactura, logística
+                  y envasado que necesitan marcar sus productos en terreno.
                 </p>
                 <p>
                   Trabajamos con proveedores certificados y ofrecemos asesoría técnica
@@ -200,12 +194,22 @@ function App() {
             </div>
             <ul className="info-list">
               <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.4 2.1L8.1 9.7a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.4c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2.2z" /></svg>
-                <div><strong>Teléfono</strong>+56 9 9892 0709</div>
+                <div className="icon-badge">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.4 2.1L8.1 9.7a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.4c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2.2z" /></svg>
+                </div>
+                <div>
+                  <strong>Teléfono</strong>
+                  <a href="tel:+56998920709">+56 9 9892 0709</a>
+                </div>
               </li>
               <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><path d="M4 4h16v16H4z" /><path d="M4 6l8 7 8-7" /></svg>
-                <div><strong>Correo</strong>contacto@codexpressglobal.cl</div>
+                <div className="icon-badge">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><path d="M4 4h16v16H4z" /><path d="M4 6l8 7 8-7" /></svg>
+                </div>
+                <div>
+                  <strong>Correo</strong>
+                  <a href="mailto:contacto@codexpressglobal.cl">contacto@codexpressglobal.cl</a>
+                </div>
               </li>
             </ul>
           </section>
@@ -214,8 +218,7 @@ function App() {
 
       <footer>
         <div className="wrap foot-inner">
-          <div className="brand">CodeXpress Global</div>
-          <div>© 2026 CodeXpress Global. Todos los derechos reservados.</div>
+          <div>© 2026 · Todos los derechos reservados.</div>
         </div>
       </footer>
     </div>
