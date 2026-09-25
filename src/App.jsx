@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './App.css'
-import printerImg from './assets/printer.jpg'
-import cartridgeImg from './assets/cartridge.jpg'
+import printerImg from './assets/hero/printer.jpg'
+import cartridgeImg from './assets/hero/cartridge.jpg'
 
 const slides = [
   {
