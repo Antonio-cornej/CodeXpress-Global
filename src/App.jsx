@@ -2,12 +2,12 @@ import { useState } from 'react'
 import './App.css'
 import printerImg from './assets/hero/printer.jpg'
 import cartridgeImg from './assets/hero/cartridge.jpg'
-import perfilImg from './assets/producto/producto_perfil.png'
-import dimensionesImg from './assets/producto/producto_dimensiones_oficial.png'
-import idiomasImg from './assets/producto/producto_idiomas.png'
-import usosImg from './assets/producto/producto_usos_azul_1.png'
-import materialesImg from './assets/producto/producto_materiales_grid.png'
-import unboxingImg from './assets/producto/producto_unboxing_oficial.png'
+import perfilImg from './assets/hero/producto_perfil.png'
+import dimensionesImg from './assets/hero/producto_dimensiones_oficial.png'
+import idiomasImg from './assets/hero/producto_idiomas.png'
+import usosImg from './assets/hero/producto_usos_azul_1.png'
+import materialesImg from './assets/hero/producto_materiales_grid.png'
+import unboxingImg from './assets/hero/producto_unboxing_oficial.png'
 
 const slides = [
   {
