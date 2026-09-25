@@ -1,8 +1,32 @@
 import { useState } from 'react'
 import './App.css'
 
+const slides = [
+  {
+    eyebrow: 'Caza · Tiro deportivo · Seguridad',
+    title: 'Equipamiento serio para quienes se lo toman en serio.',
+    text: 'Más de 15 años asesorando a cazadores, deportistas y coleccionistas en la Región Metropolitana. Asesoría técnica, stock permanente y todos los trámites en regla.',
+  },
+  {
+    eyebrow: 'Asesoría técnica',
+    title: 'Te acompañamos en cada decisión de compra.',
+    text: 'Trabajamos solo con proveedores certificados y no vendemos nada sin la asesoría correspondiente para tu tipo de uso.',
+  },
+  {
+    eyebrow: 'Cumplimiento legal',
+    title: 'Todos los trámites en regla, sin dolores de cabeza.',
+    text: 'Te guiamos en todo el proceso ante la autoridad competente, desde tu primera compra.',
+  },
+]
+
 function App() {
   const [tab, setTab] = useState('inicio')
+  const [slide, setSlide] = useState(0)
+
+  const nextSlide = () => setSlide((s) => (s + 1) % slides.length)
+  const prevSlide = () => setSlide((s) => (s - 1 + slides.length) % slides.length)
+
+  const current = slides[slide]
 
   return (
     <div className="site">
@@ -26,24 +50,33 @@ function App() {
       <main>
         {tab === 'inicio' && (
           <>
-            <section className="hero wrap">
-              <div>
-                <div className="eyebrow">Caza · Tiro deportivo · Seguridad</div>
-                <h1>Equipamiento serio para quienes se lo toman en serio.</h1>
-                <p className="lead">
-                  Más de 15 años asesorando a cazadores, deportistas y coleccionistas
-                  en la Región Metropolitana. Asesoría técnica, stock permanente y
-                  todos los trámites en regla.
-                </p>
+            <section className="hero">
+              <button className="hero-arrow left" onClick={prevSlide} aria-label="Anterior">‹</button>
+              <button className="hero-arrow right" onClick={nextSlide} aria-label="Siguiente">›</button>
+
+              <div className="hero-inner wrap">
+                <div className="eyebrow">{current.eyebrow}</div>
+                <h1>{current.title}</h1>
+                <p className="lead">{current.text}</p>
               </div>
-              <div className="hero-art" aria-hidden="true">
-                <svg viewBox="0 0 320 320" fill="none">
-                  <circle cx="160" cy="160" r="130" stroke="#3a3f45" strokeWidth="1" />
-                  <circle cx="160" cy="160" r="95" stroke="#3a3f45" strokeWidth="1" />
-                  <circle cx="160" cy="160" r="4" fill="#c9a36a" />
-                  <path d="M160 20v55M160 245v55M20 160h55M245 160h55" stroke="#a9803f" strokeWidth="2" />
-                  <circle cx="160" cy="160" r="60" stroke="#a9803f" strokeWidth="1.4" />
+
+              <div className="hero-dots">
+                {slides.map((_, i) => (
+                  <button
+                    key={i}
+                    className={i === slide ? 'dot active' : 'dot'}
+                    onClick={() => setSlide(i)}
+                    aria-label={`Ir a diapositiva ${i + 1}`}
+                  />
+                ))}
+              </div>
+
+              <div className="hero-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
+                  <circle cx="12" cy="12" r="9" /><circle cx="12" cy="12" r="3" />
+                  <path d="M12 3v4M12 17v4M3 12h4M17 12h4" />
                 </svg>
+                CodeXpress Global
               </div>
             </section>
 
