@@ -9,10 +9,6 @@ import usosImg from './assets/hero/producto_usos_azul_1.png'
 import materialesImg from './assets/hero/producto_materiales_grid.png'
 import unboxingImg from './assets/hero/producto_unboxing_oficial.png'
 import xpbFrontalImg from './assets/hero/producto_frontal_limpio.png'
-import xpbAccesoriosImg from './assets/hero/producto_incluye_accesorios.png'
-import xpbDistanciaImg from './assets/hero/producto_distancia_idiomas_dpi.png'
-import xpbContenidosImg from './assets/hero/producto_contenidos_impresion.png'
-import xpbMaterialesImg from './assets/hero/producto_materiales_variados.png'
 
 const slides = [
   {
@@ -68,7 +64,7 @@ const products = [
     description:
       'Impresora de inyección de tinta portátil de mano, de 12.7mm, para códigos QR, códigos de barras, fechas, números, logotipos y caducidad, con soporte para más de 25 idiomas. Cabezal de impresión térmico P5 con resolución de 300 a 600 DPI. Altura de impresión ajustable de 2 a 12.7 mm, de 1 a 5 líneas. Batería incorporada de 1500 mAh e interfaz Tipo-C, ideal para codificación móvil. Adecuada para plástico, cartón, madera, metal, cable, piedra y superficies irregulares.',
     cover: 'xpbFrontalImg',
-    gallery: ['xpbFrontalImg', 'xpbAccesoriosImg', 'xpbDistanciaImg', 'xpbContenidosImg', 'xpbMaterialesImg'],
+    gallery: ['xpbFrontalImg'],
     specStrip: [
       { label: 'Resolución', value: '300-600 DPI' },
       { label: 'Altura de impresión', value: '2-12.7 mm' },
@@ -76,12 +72,6 @@ const products = [
       { label: 'Distancia óptima', value: '2-5 mm' },
       { label: 'Idiomas', value: '+25' },
       { label: 'Batería', value: '1500 mAh' },
-    ],
-    galleryDetails: [
-      { img: 'xpbAccesoriosImg', title: 'Incluye accesorios', text: 'Lápiz táctil, destornillador, manual de usuario, placa de posicionamiento y cable de datos (sin cartucho).', contain: false },
-      { img: 'xpbDistanciaImg', title: 'Distancia e idiomas', text: 'Distancia óptima de impresión de 2 a 5 mm, con más de 25 idiomas disponibles y resolución de 600 DPI.', contain: false },
-      { img: 'xpbContenidosImg', title: 'Múltiples contenidos', text: 'Códigos QR, códigos de barra, íconos, números correlativos, logotipos y fuentes de fecha, vía puerto Tipo-C.', contain: false },
-      { img: 'xpbMaterialesImg', title: 'Múltiples materiales', text: 'Cartón, plástico, tela, madera, metal y tuberías, entre otras superficies.', contain: false },
     ],
   },
 ]
@@ -108,6 +98,7 @@ function App() {
 
   const imageMap = {
     printerImg, cartridgeImg, perfilImg, dimensionesImg, idiomasImg, usosImg, materialesImg, unboxingImg,
+    xpbFrontalImg,
   }
 
   const openProductPanel = (product) => {
