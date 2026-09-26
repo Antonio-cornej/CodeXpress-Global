@@ -9,6 +9,7 @@ import usosImg from './assets/hero/producto_usos_azul_1.png'
 import materialesImg from './assets/hero/producto_materiales_grid.png'
 import unboxingImg from './assets/hero/producto_unboxing_oficial.png'
 import xpbFrontalImg from './assets/hero/producto_frontal_limpio.png'
+import cartuchoBk127Img from './assets/hero/PLACEHOLDER_cartucho_bk127_frontal.png'
 
 const slides = [
   {
@@ -88,6 +89,24 @@ const supplies = [
     cover: 'cartridgeImg',
     gallery: ['cartridgeImg'],
   },
+  {
+    id: 'cartucho-bk127',
+    category: 'insumo',
+    name: 'Cartucho de tinta BK127',
+    tipo: 'Consumible',
+    tecnologia: 'Tinta solvente, resistente al agua',
+    description:
+      'Cartucho remanufacturado de 42ML de capacidad, tinta de secado rápido y resistente a manchas. Altura de impresión de 2 a 12.7mm. Chip estable para reconocimiento preciso y consistente. Compatible con impresoras TIJ sin cifrado, resolución de 300-600 DPI.',
+    cover: 'cartuchoBk127Img',
+    gallery: ['cartuchoBk127Img'],
+    specStrip: [
+      { label: 'Capacidad', value: '42 ML' },
+      { label: 'Altura de impresión', value: '2-12.7 mm' },
+      { label: 'Resolución', value: '300-600 DPI' },
+      { label: 'Distancia', value: '2-5 mm' },
+      { label: 'Secado', value: '2-5 s' },
+    ],
+  },
 ]
 
 function App() {
@@ -98,7 +117,7 @@ function App() {
 
   const imageMap = {
     printerImg, cartridgeImg, perfilImg, dimensionesImg, idiomasImg, usosImg, materialesImg, unboxingImg,
-    xpbFrontalImg,
+    xpbFrontalImg, cartuchoBk127Img,
   }
 
   const openProductPanel = (product) => {
