@@ -19,13 +19,13 @@ import xpbMaterialesImg from './assets/hero/producto_materiales_variados.png'
 import xpbDistanciaImg from './assets/hero/producto_distancia_idiomas_dpi.png'
 import xpbAccesoriosImg from './assets/hero/producto_incluye_accesorios.png'
 
-// ===== IMÁGENES: CARTUCHO NEGRO 42ML =====
-import cartuchoDetallesImg from './assets/hero/cartucho_detalles.png'
-import cartuchoAguaImg from './assets/hero/cartucho_resistente_agua.png'
-import cartuchoParametrosImg from './assets/hero/cartucho_parametros.png'
-import cartuchoComponentesImg from './assets/hero/cartucho_detalle_componentes.png'
-import cartuchoAplicacionesImg from './assets/hero/cartucho_aplicaciones.png'
-import cartuchoPack3Img from './assets/hero/cartucho_pack_3.png'
+// ===== IMÁGENES: CARTUCHO NEGRO 42ML (temporales, pendiente foto real) =====
+import cartuchoDetallesImg from './assets/hero/cartridge.jpg'
+import cartuchoAguaImg from './assets/hero/cartridge.jpg'
+import cartuchoParametrosImg from './assets/hero/cartridge.jpg'
+import cartuchoComponentesImg from './assets/hero/cartridge.jpg'
+import cartuchoAplicacionesImg from './assets/hero/cartridge.jpg'
+import cartuchoPack3Img from './assets/hero/cartridge.jpg'
 
 // ===== IMÁGENES: CARTUCHO 12.7 MM =====
 import cartucho127Img1 from './assets/hero/cartucho_12_7mm_01.png'
