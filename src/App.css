@@ -46,9 +46,13 @@ h1,h2,h3{font-family:'Poppins', 'Segoe UI', sans-serif; font-weight:700; letter-
   box-sizing:border-box;
 }
 .nav-mark{
-  width:38px; height:38px; border-radius:9px; flex:none;
-  background:var(--dark); display:flex; align-items:center; justify-content:center;
+  width:auto; height:32px; border-radius:0;
+  background:none; display:flex; align-items:center; justify-content:center;
 }
+.nav-logo{
+  height:100%; width:auto; object-fit:contain;
+}
+
 .nav-mark svg{width:20px; height:20px; color:var(--orange);}
 .links{display:flex; gap:34px; font-size:.9rem;}
 .links button{

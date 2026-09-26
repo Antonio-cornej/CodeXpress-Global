@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './App.css'
+import logoImg from './assets/logo-codexpress.png'
 
 // ===== IMÁGENES: IMPRESORA PRINCIPAL =====
 import printerImg from './assets/hero/printer.jpg'
@@ -186,19 +187,12 @@ function App() {
   const prevSlide = () => setSlide((s) => (s - 1 + slides.length) % slides.length)
   const current = slides[slide]
 
-  const LogoIcon = (props) => (
-    <svg viewBox="0 0 24 24" fill="none" {...props}>
-      <path d="M4 9h13a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2h-6l-2 5-1.5-5H6a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2z" fill="currentColor" />
-      <rect x="7" y="11" width="8" height="4" rx="0.5" fill="white" />
-    </svg>
-  )
-
   return (
     <div className="site">
       <header className="nav">
         <div className="nav-inner">
           <div className="nav-mark">
-            <LogoIcon width="20" height="20" />
+            <img src={logoImg} alt="CodeXpress" className="nav-logo" />
           </div>
           <nav className="links">
             <button className={tab === 'inicio' ? 'active' : ''} onClick={() => setTab('inicio')}>Inicio</button>
