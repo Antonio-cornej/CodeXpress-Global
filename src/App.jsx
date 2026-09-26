@@ -20,8 +20,8 @@ import xpbDistanciaImg from './assets/hero/mini/producto_distancia_idiomas_dpi.p
 import xpbAccesoriosImg from './assets/hero/mini/producto_incluye_accesorios.png'
 
 // ===== IMÁGENES: CARTUCHO NEGRO 42ML =====
-import cartuchoDetallesImg from './assets/hero/cartucho-negro/cartucho_detalles.png'
 import cartuchoAguaImg from './assets/hero/cartucho-negro/cartucho_resistente_agua.png'
+import cartuchoDetallesImg from './assets/hero/cartucho-negro/cartucho_detalles.png'
 import cartuchoParametrosImg from './assets/hero/cartucho-negro/cartucho_parametros.png'
 import cartuchoComponentesImg from './assets/hero/cartucho-negro/cartucho_detalle_componentes.png'
 import cartuchoAplicacionesImg from './assets/hero/cartucho-negro/cartucho_aplicaciones.png'
@@ -32,7 +32,6 @@ import cartucho127Img1 from './assets/hero/cartucho-12-7/cartucho_12_7mm_01.png'
 import cartucho127Img2 from './assets/hero/cartucho-12-7/cartucho_12_7mm_02.png'
 import cartucho127Img3 from './assets/hero/cartucho-12-7/cartucho_12_7mm_03.png'
 import cartucho127Img4 from './assets/hero/cartucho-12-7/cartucho_12_7mm_04.png'
-  
 
 // ===== SLIDES HERO =====
 const slides = [
@@ -135,32 +134,34 @@ const supplies = [
     ],
   },
   {
-    id: 'cartucho-negro',
-    category: 'insumo',
-    name: 'Cartucho de tinta negra 42ML',
-    tipo: 'Consumible',
-    tecnologia: 'Tinta solvente resistente al agua',
-    description:
-      'Cartucho de tinta negra de 42 ML de capacidad, con tinta solvente de secado rápido, resistente al agua y a las manchas. Diseñado para impresión de 2 a 12.7 mm de altura y compatible con impresoras TIJ sin cifrado. Ofrece una resolución de 300 a 600 DPI y un chip estable para un reconocimiento preciso y consistente.',
-    cover: 'cartuchoAguaImg',
-    gallery: ['cartuchoAguaImg', 'cartuchoDetallesImg', 'cartuchoParametrosImg', 'cartuchoComponentesImg', 'cartuchoAplicacionesImg', 'cartuchoPack3Img'],
-    specStrip: [
-      { label: 'Capacidad', value: '42 ML' },
-      { label: 'Altura de impresión', value: '2-12.7 mm' },
-      { label: 'Resolución', value: '300-600 DPI' },
-      { label: 'Distancia', value: '2-5 mm' },
-      { label: 'Secado', value: '2-5 s' },
-    ],
-    galleryDetails: [
-      { img: 'cartuchoDetallesImg', title: 'Cartucho de tinta negra', text: 'Carcasa resistente, capacidad de 42 ML, tinta de secado rápido y chip estable.', contain: true },
-      { img: 'cartuchoAguaImg', title: 'Tinta solvente resistente', text: 'Tinta negra de secado rápido, resistente al agua y diseñada para mantener una impresión clara y duradera.', contain: true },
-      { img: 'cartuchoParametrosImg', title: 'Parámetros técnicos', text: 'Resolución de 300 a 600 DPI, altura de impresión de hasta 12.7 mm y distancia recomendada de 2 a 5 mm.', contain: true },
-      { img: 'cartuchoComponentesImg', title: 'Detalles del cartucho', text: 'Diseño compacto con chip de reconocimiento, cabezal de impresión y tinta solvente.', contain: true },
-      { img: 'cartuchoAplicacionesImg', title: 'Amplia compatibilidad', text: 'Adecuado para plástico, vidrio, metal, cerámica, madera, papel, cartón y otras superficies.', contain: true },
-      { img: 'cartuchoPack3Img', title: 'Pack de 3 cartuchos', text: 'Presentación de tres cartuchos de tinta negra con altura de impresión de 2 a 12.7 mm.', contain: true },
+  id: 'cartucho-negro',
+  category: 'insumo',
+  name: 'Cartucho de tinta negra 42ML',
+  tipo: 'Consumible',
+  tecnologia: 'Tinta solvente resistente al agua',
+
+  description:
+    'Cartucho de tinta negra de 42 ML de capacidad, con tinta solvente de secado rápido, resistente al agua y a las manchas. Diseñado para impresión de 2 a 12.7 mm de altura y compatible con impresoras TIJ sin cifrado. Ofrece una resolución de 300 a 600 DPI y un chip estable para un reconocimiento preciso y consistente.',
+  cover: 'cartuchoAguaImg',
+  gallery: ['cartuchoAguaImg','cartuchoDetallesImg','cartuchoParametrosImg','cartuchoComponentesImg','cartuchoAplicacionesImg','cartuchoPack3Img',],
+  specStrip: [
+    { label: 'Capacidad', value: '42 ML' },
+    { label: 'Altura de impresión', value: '2-12.7 mm' },
+    { label: 'Resolución', value: '300-600 DPI' },
+    { label: 'Distancia', value: '2-5 mm' },
+    { label: 'Secado', value: '2-5 s' },
+  ],
+  galleryDetails: [
+      { img: 'cartuchoAguaImg', title: 'Tinta solvente resistente', text: 'Tinta negra resistente al agua, de secado rápido y diseñada para mantener una impresión clara y duradera.', contain: true,},
+      { img: 'cartuchoDetallesImg', title: 'Detalles del producto', text: 'Cartucho de tinta negra de 42 ML, diseñado para impresión estable y de secado rápido.', contain: true,},
+      { img: 'cartuchoParametrosImg', title: 'Parámetros técnicos', text: 'Resolución de 300 a 600 DPI, altura de impresión de 2 a 12.7 mm y distancia recomendada de 2 a 5 mm.', contain: true,},
+      { img: 'cartuchoComponentesImg', title: 'Detalles del cartucho', text: 'Diseño compacto con chip de reconocimiento, cabezal de impresión y tinta solvente.', contain: true,},
+      { img: 'cartuchoAplicacionesImg', title: 'Amplia compatibilidad', text: 'Adecuado para plástico, vidrio, metal, cerámica, madera, papel, cartón y otras superficies.', contain: true,},
+      { img: 'cartuchoPack3Img', title: 'Pack de 3 cartuchos', text: 'Presentación de tres cartuchos de tinta negra con altura de impresión de 2 a 12.7 mm.', contain: true,},
     ],
   },
 ]
+
 
 function App() {
   const [tab, setTab] = useState('inicio')
