@@ -4,35 +4,35 @@ import './App.css'
 import logoImg from './assets/logo-codexpress.jpg'
 
 // ===== IMÁGENES: IMPRESORA PRINCIPAL =====
-import printerImg from './assets/hero/printer.jpg'
+import printerImg from './assets/hero/impresora/printer.jpg'
 import cartridgeImg from './assets/hero/cartridge.jpg'
-import perfilImg from './assets/hero/producto_perfil.png'
-import dimensionesImg from './assets/hero/producto_dimensiones_oficial.png'
-import idiomasImg from './assets/hero/producto_idiomas.png'
-import usosImg from './assets/hero/producto_usos_azul_1.png'
-import materialesImg from './assets/hero/producto_materiales_grid.png'
-import unboxingImg from './assets/hero/producto_unboxing_oficial.png'
+import perfilImg from './assets/hero/impresora/producto_perfil.png'
+import dimensionesImg from './assets/hero/impresora/producto_dimensiones_oficial.png'
+import idiomasImg from './assets/hero/impresora/producto_idiomas.png'
+import usosImg from './assets/hero/impresora/producto_usos_azul_1.png'
+import materialesImg from './assets/hero/impresora/producto_materiales_grid.png'
+import unboxingImg from './assets/hero/impresora/producto_unboxing_oficial.png'
 
 // ===== IMÁGENES: IMPRESORA PORTÁTIL MINI =====
-import xpbFrontalImg from './assets/hero/producto_frontal_limpio.png'
-import xpbContenidosImg from './assets/hero/producto_contenidos_impresion.png'
-import xpbMaterialesImg from './assets/hero/producto_materiales_variados.png'
-import xpbDistanciaImg from './assets/hero/producto_distancia_idiomas_dpi.png'
-import xpbAccesoriosImg from './assets/hero/producto_incluye_accesorios.png'
+import xpbFrontalImg from './assets/hero/mini/producto_frontal_limpio.png'
+import xpbContenidosImg from './assets/hero/mini/producto_contenidos_impresion.png'
+import xpbMaterialesImg from './assets/hero/mini/producto_materiales_variados.png'
+import xpbDistanciaImg from './assets/hero/mini/producto_distancia_idiomas_dpi.png'
+import xpbAccesoriosImg from './assets/hero/mini/producto_incluye_accesorios.png'
 
-// ===== IMÁGENES: CARTUCHO NEGRO 42ML (temporales, pendiente foto real) =====
-import cartuchoDetallesImg from './assets/hero/cartridge.jpg'
-import cartuchoAguaImg from './assets/hero/cartridge.jpg'
-import cartuchoParametrosImg from './assets/hero/cartridge.jpg'
-import cartuchoComponentesImg from './assets/hero/cartridge.jpg'
-import cartuchoAplicacionesImg from './assets/hero/cartridge.jpg'
-import cartuchoPack3Img from './assets/hero/cartridge.jpg'
+// ===== IMÁGENES: CARTUCHO NEGRO 42ML =====
+import cartuchoDetallesImg from './assets/hero/cartucho-negro/cartucho_detalles.png'
+import cartuchoAguaImg from './assets/hero/cartucho-negro/cartucho_resistente_agua.png'
+import cartuchoParametrosImg from './assets/hero/cartucho-negro/cartucho_parametros.png'
+import cartuchoComponentesImg from './assets/hero/cartucho-negro/cartucho_detalle_componentes.png'
+import cartuchoAplicacionesImg from './assets/hero/cartucho-negro/cartucho_aplicaciones.png'
+import cartuchoPack3Img from './assets/hero/cartucho-negro/cartucho_pack_3.png'
 
 // ===== IMÁGENES: CARTUCHO 12.7 MM =====
-import cartucho127Img1 from './assets/hero/cartucho_12_7mm_01.png'
-import cartucho127Img2 from './assets/hero/cartucho_12_7mm_02.png'
-import cartucho127Img3 from './assets/hero/cartucho_12_7mm_03.png'
-import cartucho127Img4 from './assets/hero/cartucho_12_7mm_04.png'
+import cartucho127Img1 from './assets/hero/cartucho-12-7/cartucho_12_7mm_01.png'
+import cartucho127Img2 from './assets/hero/cartucho-12-7/cartucho_12_7mm_02.png'
+import cartucho127Img3 from './assets/hero/cartucho-12-7/cartucho_12_7mm_03.png'
+import cartucho127Img4 from './assets/hero/cartucho-12-7/cartucho_12_7mm_04.png'
 
 // ===== SLIDES HERO =====
 const slides = [
