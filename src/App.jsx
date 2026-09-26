@@ -38,6 +38,21 @@ const products = [
       'Equipo portátil para marcar fechas de vencimiento, códigos QR, códigos de barra y logotipos sobre botellas plásticas, vidrio, piezas metálicas y tuberías de acero. Pantalla táctil de 4.3", batería para toda la jornada y resolución de hasta 600 DPI, con impresión nítida a solo 3 mm de distancia.',
     cover: 'printerImg',
     gallery: ['printerImg', 'perfilImg', 'dimensionesImg', 'idiomasImg', 'usosImg', 'materialesImg', 'unboxingImg'],
+    specStrip: [
+      { label: 'Ancho', value: '48 mm' },
+      { label: 'Largo', value: '130 mm' },
+      { label: 'Alto', value: '215 mm' },
+      { label: 'Pantalla táctil', value: '4.3"' },
+      { label: 'Idiomas', value: '28' },
+    ],
+    galleryDetails: [
+      { img: 'perfilImg', title: 'Diseño ergonómico', text: 'Empuñadura pensada para usarse con una sola mano durante toda la jornada.', contain: false },
+      { img: 'dimensionesImg', title: 'Medidas exactas', text: 'Compacta y liviana, cabe en cualquier caja de herramientas.', contain: true },
+      { img: 'idiomasImg', title: '28 idiomas', text: 'Interfaz simple para equipos de trabajo de distintas nacionalidades.', contain: true },
+      { img: 'usosImg', title: 'Imprime sobre casi todo', text: 'Plástico, vidrio, metal, papel, cartón y tuberías, entre otras superficies.', contain: true },
+      { img: 'materialesImg', title: 'Resultados reales', text: 'Nítida en tapas, bolsas, etiquetas, cartón, logos y empaques.', contain: true },
+      { img: 'unboxingImg', title: 'Qué incluye', text: 'Impresora, cargador, cable USB, base y líquido de limpieza, y manual.', contain: false },
+    ],
   },
 ]
 
@@ -176,68 +191,6 @@ function App() {
                   <h3>600 DPI, cartuchos libres</h3>
                   <p>Resolución nítida a 3mm de distancia, con cartuchos de 12.7mm sin cifrado ni restricción de fabricante.</p>
                 </div>
-              </div>
-            </section>
-
-            {/* Galería unificada del equipo */}
-            <section className="wrap">
-              <div className="section-head">
-                <div className="kicker">Conoce el equipo</div>
-                <h2>Diseño, alcance y contenido, en un solo lugar.</h2>
-                <p>Desde las medidas exactas hasta lo que trae la caja al abrirla, así es el equipo que estás por sumar a tu operación.</p>
-              </div>
-
-              <div className="spec-strip">
-                <div><strong>48 mm</strong><span>Ancho</span></div>
-                <div><strong>130 mm</strong><span>Largo</span></div>
-                <div><strong>215 mm</strong><span>Alto</span></div>
-                <div><strong>4.3"</strong><span>Pantalla táctil</span></div>
-                <div><strong>28</strong><span>Idiomas</span></div>
-              </div>
-
-              <div className="gallery-grid">
-                <figure className="media-card">
-                  <div className="media"><img src={perfilImg} alt="Vista de perfil de la impresora portátil" /></div>
-                  <figcaption>
-                    <h3>Diseño ergonómico</h3>
-                    <p>Empuñadura pensada para usarse con una sola mano durante toda la jornada.</p>
-                  </figcaption>
-                </figure>
-                <figure className="media-card">
-                  <div className="media media-contain"><img src={dimensionesImg} alt="Diagrama de dimensiones de la impresora" /></div>
-                  <figcaption>
-                    <h3>Medidas exactas</h3>
-                    <p>Compacta y liviana, cabe en cualquier caja de herramientas.</p>
-                  </figcaption>
-                </figure>
-                <figure className="media-card">
-                  <div className="media media-contain"><img src={idiomasImg} alt="Interfaz de la impresora disponible en múltiples idiomas" /></div>
-                  <figcaption>
-                    <h3>28 idiomas</h3>
-                    <p>Interfaz simple para equipos de trabajo de distintas nacionalidades.</p>
-                  </figcaption>
-                </figure>
-                <figure className="media-card">
-                  <div className="media media-contain"><img src={usosImg} alt="Ejemplos de superficies compatibles: plástico, papel, vidrio, metal, cartón y tuberías" /></div>
-                  <figcaption>
-                    <h3>Imprime sobre casi todo</h3>
-                    <p>Plástico, vidrio, metal, papel, cartón y tuberías, entre otras superficies.</p>
-                  </figcaption>
-                </figure>
-                <figure className="media-card">
-                  <div className="media media-contain"><img src={materialesImg} alt="Ejemplos reales de impresión sobre tapas, bolsas, etiquetas, cartón, logos y empaques" /></div>
-                  <figcaption>
-                    <h3>Resultados reales</h3>
-                    <p>Nítida en tapas, bolsas, etiquetas, cartón, logos y empaques.</p>
-                  </figcaption>
-                </figure>
-                <figure className="media-card">
-                  <div className="media"><img src={unboxingImg} alt="Contenido de la caja: impresora, cargador, cable USB, base de limpieza y manual" /></div>
-                  <figcaption>
-                    <h3>Qué incluye</h3>
-                    <p>Impresora, cargador, cable USB, base y líquido de limpieza, y manual.</p>
-                  </figcaption>
-                </figure>
               </div>
             </section>
 
@@ -412,6 +365,34 @@ function App() {
                   <strong>{openProduct.tecnologia}</strong>
                 </div>
               </div>
+
+              {openProduct.specStrip && (
+                <div className="panel-spec-strip">
+                  {openProduct.specStrip.map((s) => (
+                    <div key={s.label}>
+                      <strong>{s.value}</strong>
+                      <span>{s.label}</span>
+                    </div>
+                  ))}
+                </div>
+              )}
+
+              {openProduct.galleryDetails && (
+                <div className="panel-gallery-grid">
+                  {openProduct.galleryDetails.map((d) => (
+                    <figure key={d.title} className="media-card">
+                      <div className={d.contain ? 'media media-contain' : 'media'}>
+                        <img src={imageMap[d.img]} alt={d.title} />
+                      </div>
+                      <figcaption>
+                        <h3>{d.title}</h3>
+                        <p>{d.text}</p>
+                      </figcaption>
+                    </figure>
+                  ))}
+                </div>
+              )}
+
               <a className="panel-cta" href="https://wa.me/56998920709" target="_blank" rel="noreferrer">
                 Consultar por WhatsApp
               </a>
