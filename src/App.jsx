@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './App.css'
+
 import printerImg from './assets/hero/printer.jpg'
 import cartridgeImg from './assets/hero/cartridge.jpg'
 import perfilImg from './assets/hero/producto_perfil.png'
@@ -8,8 +9,18 @@ import idiomasImg from './assets/hero/producto_idiomas.png'
 import usosImg from './assets/hero/producto_usos_azul_1.png'
 import materialesImg from './assets/hero/producto_materiales_grid.png'
 import unboxingImg from './assets/hero/producto_unboxing_oficial.png'
+
+// =====================================================
+// XPB-127
+// =====================================================
+import xpbContenidosImg from './assets/hero/producto_contenidos_impresion.png'
+import xpbMaterialesImg from './assets/hero/producto_materiales_variados.png'
+import xpbDistanciaImg from './assets/hero/producto_distancia_idiomas_dpi.png'
 import xpbFrontalImg from './assets/hero/producto_frontal_limpio.png'
+import xpbAccesoriosImg from './assets/hero/producto_incluye_accesorios.png'
+
 import cartuchoBk127Img from './assets/hero/cartridge.jpg'
+
 
 const slides = [
   {
@@ -29,6 +40,7 @@ const slides = [
   },
 ]
 
+
 const products = [
   {
     id: 'impresora',
@@ -36,10 +48,22 @@ const products = [
     name: 'Impresora de inyección de tinta portátil',
     tipo: 'Impresora portátil',
     tecnologia: 'Inyección de tinta',
+
     description:
       'Equipo portátil para marcar fechas de vencimiento, códigos QR, códigos de barra y logotipos sobre botellas plásticas, vidrio, piezas metálicas y tuberías de acero. Pantalla táctil de 4.3", batería para toda la jornada y resolución de hasta 600 DPI, con impresión nítida a solo 3 mm de distancia.',
+
     cover: 'printerImg',
-    gallery: ['printerImg', 'perfilImg', 'dimensionesImg', 'idiomasImg', 'usosImg', 'materialesImg', 'unboxingImg'],
+
+    gallery: [
+      'printerImg',
+      'perfilImg',
+      'dimensionesImg',
+      'idiomasImg',
+      'usosImg',
+      'materialesImg',
+      'unboxingImg',
+    ],
+
     specStrip: [
       { label: 'Ancho', value: '48 mm' },
       { label: 'Largo', value: '130 mm' },
@@ -47,25 +71,73 @@ const products = [
       { label: 'Pantalla táctil', value: '4.3"' },
       { label: 'Idiomas', value: '28' },
     ],
+
     galleryDetails: [
-      { img: 'perfilImg', title: 'Diseño ergonómico', text: 'Empuñadura pensada para usarse con una sola mano durante toda la jornada.', contain: false },
-      { img: 'dimensionesImg', title: 'Medidas exactas', text: 'Compacta y liviana, cabe en cualquier caja de herramientas.', contain: true },
-      { img: 'idiomasImg', title: '28 idiomas', text: 'Interfaz simple para equipos de trabajo de distintas nacionalidades.', contain: true },
-      { img: 'usosImg', title: 'Imprime sobre casi todo', text: 'Plástico, vidrio, metal, papel, cartón y tuberías, entre otras superficies.', contain: true },
-      { img: 'materialesImg', title: 'Resultados reales', text: 'Nítida en tapas, bolsas, etiquetas, cartón, logos y empaques.', contain: true },
-      { img: 'unboxingImg', title: 'Qué incluye', text: 'Impresora, cargador, cable USB, base y líquido de limpieza, y manual.', contain: false },
+      {
+        img: 'perfilImg',
+        title: 'Diseño ergonómico',
+        text: 'Empuñadura pensada para usarse con una sola mano durante toda la jornada.',
+        contain: false,
+      },
+      {
+        img: 'dimensionesImg',
+        title: 'Medidas exactas',
+        text: 'Compacta y liviana, cabe en cualquier caja de herramientas.',
+        contain: true,
+      },
+      {
+        img: 'idiomasImg',
+        title: '28 idiomas',
+        text: 'Interfaz simple para equipos de trabajo de distintas nacionalidades.',
+        contain: true,
+      },
+      {
+        img: 'usosImg',
+        title: 'Imprime sobre casi todo',
+        text: 'Plástico, vidrio, metal, papel, cartón y tuberías, entre otras superficies.',
+        contain: true,
+      },
+      {
+        img: 'materialesImg',
+        title: 'Resultados reales',
+        text: 'Nítida en tapas, bolsas, etiquetas, cartón, logos y empaques.',
+        contain: true,
+      },
+      {
+        img: 'unboxingImg',
+        title: 'Qué incluye',
+        text: 'Impresora, cargador, cable USB, base y líquido de limpieza, y manual.',
+        contain: false,
+      },
     ],
   },
+
+  // =====================================================
+  // IMPRESORA XPB-127
+  // =====================================================
   {
     id: 'xpb127',
     category: 'equipo',
+
     name: 'Impresora de inyección de tinta portátil mini XPB-127',
+
     tipo: 'Impresora portátil mini',
+
     tecnologia: 'Inyección de tinta térmica P5',
+
     description:
       'Impresora de inyección de tinta portátil de mano, de 12.7mm, para códigos QR, códigos de barras, fechas, números, logotipos y caducidad, con soporte para más de 25 idiomas. Cabezal de impresión térmico P5 con resolución de 300 a 600 DPI. Altura de impresión ajustable de 2 a 12.7 mm, de 1 a 5 líneas. Batería incorporada de 1500 mAh e interfaz Tipo-C, ideal para codificación móvil. Adecuada para plástico, cartón, madera, metal, cable, piedra y superficies irregulares.',
+
     cover: 'xpbFrontalImg',
-    gallery: ['xpbFrontalImg'],
+
+    gallery: [
+      'xpbFrontalImg',
+      'xpbContenidosImg',
+      'xpbMaterialesImg',
+      'xpbDistanciaImg',
+      'xpbAccesoriosImg',
+    ],
+
     specStrip: [
       { label: 'Resolución', value: '300-600 DPI' },
       { label: 'Altura de impresión', value: '2-12.7 mm' },
@@ -74,8 +146,36 @@ const products = [
       { label: 'Idiomas', value: '+25' },
       { label: 'Batería', value: '1500 mAh' },
     ],
+
+    galleryDetails: [
+      {
+        img: 'xpbContenidosImg',
+        title: 'Amplia variedad de impresión',
+        text: 'Permite imprimir códigos QR, códigos de barras, logotipos, números, fechas y otros contenidos.',
+        contain: true,
+      },
+      {
+        img: 'xpbMaterialesImg',
+        title: 'Compatible con distintos materiales',
+        text: 'Imprime sobre cartón, plástico, tela, madera, metal y tuberías de PVC.',
+        contain: true,
+      },
+      {
+        img: 'xpbDistanciaImg',
+        title: 'Impresión de alta resolución',
+        text: 'Resolución de hasta 600 DPI y distancia óptima de impresión de 2 a 5 mm.',
+        contain: true,
+      },
+      {
+        img: 'xpbAccesoriosImg',
+        title: 'Accesorios incluidos',
+        text: 'Incluye lápiz táctil, destornillador, manual de usuario, placa de posicionamiento y cable de datos.',
+        contain: true,
+      },
+    ],
   },
 ]
+
 
 const supplies = [
   {
@@ -84,21 +184,27 @@ const supplies = [
     name: 'Cartucho de tinta',
     tipo: 'Consumible',
     tecnologia: 'Tinta eco-solvente',
+
     description:
       'Cartucho compatible con la línea de impresoras portátiles, formulado para alta adherencia y secado rápido. Formato compacto de 12.7 mm, listo para instalar y sin restricciones de fabricante.',
+
     cover: 'cartridgeImg',
     gallery: ['cartridgeImg'],
   },
+
   {
     id: 'cartucho-bk127',
     category: 'insumo',
     name: 'Cartucho de tinta BK127',
     tipo: 'Consumible',
     tecnologia: 'Tinta solvente, resistente al agua',
+
     description:
       'Cartucho remanufacturado de 42ML de capacidad, tinta de secado rápido y resistente a manchas. Altura de impresión de 2 a 12.7mm. Chip estable para reconocimiento preciso y consistente. Compatible con impresoras TIJ sin cifrado, resolución de 300-600 DPI.',
+
     cover: 'cartuchoBk127Img',
     gallery: ['cartuchoBk127Img'],
+
     specStrip: [
       { label: 'Capacidad', value: '42 ML' },
       { label: 'Altura de impresión', value: '2-12.7 mm' },
@@ -109,6 +215,7 @@ const supplies = [
   },
 ]
 
+
 function App() {
   const [tab, setTab] = useState('inicio')
   const [slide, setSlide] = useState(0)
@@ -116,330 +223,968 @@ function App() {
   const [activePhoto, setActivePhoto] = useState(0)
 
   const imageMap = {
-    printerImg, cartridgeImg, perfilImg, dimensionesImg, idiomasImg, usosImg, materialesImg, unboxingImg,
-    xpbFrontalImg, cartuchoBk127Img,
+    printerImg,
+    cartridgeImg,
+    perfilImg,
+    dimensionesImg,
+    idiomasImg,
+    usosImg,
+    materialesImg,
+    unboxingImg,
+
+    // XPB-127
+    xpbFrontalImg,
+    xpbContenidosImg,
+    xpbMaterialesImg,
+    xpbDistanciaImg,
+    xpbAccesoriosImg,
+
+    cartuchoBk127Img,
   }
+
 
   const openProductPanel = (product) => {
     setOpenProduct(product)
     setActivePhoto(0)
   }
+
   const closeProductPanel = () => setOpenProduct(null)
 
-  const nextSlide = () => setSlide((s) => (s + 1) % slides.length)
-  const prevSlide = () => setSlide((s) => (s - 1 + slides.length) % slides.length)
+  const nextSlide = () =>
+    setSlide((s) => (s + 1) % slides.length)
+
+  const prevSlide = () =>
+    setSlide((s) => (s - 1 + slides.length) % slides.length)
 
   const current = slides[slide]
 
+
   const LogoIcon = (props) => (
     <svg viewBox="0 0 24 24" fill="none" {...props}>
-      <path d="M4 9h13a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2h-6l-2 5-1.5-5H6a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2z" fill="currentColor"/>
-      <rect x="7" y="11" width="8" height="4" rx="0.5" fill="white"/>
+      <path
+        d="M4 9h13a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2h-6l-2 5-1.5-5H6a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2z"
+        fill="currentColor"
+      />
+
+      <rect
+        x="7"
+        y="11"
+        width="8"
+        height="4"
+        rx="0.5"
+        fill="white"
+      />
     </svg>
   )
 
+
   return (
     <div className="site">
+
+      {/* =====================================================
+          NAVEGACIÓN
+      ===================================================== */}
+
       <header className="nav">
         <div className="nav-inner">
+
           <div className="nav-mark">
             <LogoIcon width="20" height="20" />
           </div>
+
           <nav className="links">
-            <button className={tab === 'inicio' ? 'active' : ''} onClick={() => setTab('inicio')}>Inicio</button>
-            <button className={tab === 'nosotros' ? 'active' : ''} onClick={() => setTab('nosotros')}>Nosotros</button>
-            <button className={tab === 'contacto' ? 'active' : ''} onClick={() => setTab('contacto')}>Contacto</button>
+
+            <button
+              className={tab === 'inicio' ? 'active' : ''}
+              onClick={() => setTab('inicio')}
+            >
+              Inicio
+            </button>
+
+            <button
+              className={tab === 'nosotros' ? 'active' : ''}
+              onClick={() => setTab('nosotros')}
+            >
+              Nosotros
+            </button>
+
+            <button
+              className={tab === 'contacto' ? 'active' : ''}
+              onClick={() => setTab('contacto')}
+            >
+              Contacto
+            </button>
+
           </nav>
+
         </div>
       </header>
 
+
       <main>
+
+        {/* =====================================================
+            INICIO
+        ===================================================== */}
+
         {tab === 'inicio' && (
           <>
+
+            {/* HERO */}
+
             <section className="hero">
-              <button className="hero-arrow left" onClick={prevSlide} aria-label="Anterior">‹</button>
-              <button className="hero-arrow right" onClick={nextSlide} aria-label="Siguiente">›</button>
+
+              <button
+                className="hero-arrow left"
+                onClick={prevSlide}
+                aria-label="Anterior"
+              >
+                ‹
+              </button>
+
+              <button
+                className="hero-arrow right"
+                onClick={nextSlide}
+                aria-label="Siguiente"
+              >
+                ›
+              </button>
+
 
               <div className="hero-inner wrap">
-                <div className="eyebrow">{current.eyebrow}</div>
+
+                <div className="eyebrow">
+                  {current.eyebrow}
+                </div>
+
                 <h1>{current.title}</h1>
-                <p className="lead">{current.text}</p>
+
+                <p className="lead">
+                  {current.text}
+                </p>
+
               </div>
 
+
               <div className="hero-dots">
+
                 {slides.map((_, i) => (
                   <button
                     key={i}
-                    className={i === slide ? 'dot active' : 'dot'}
+                    className={
+                      i === slide
+                        ? 'dot active'
+                        : 'dot'
+                    }
                     onClick={() => setSlide(i)}
                     aria-label={`Ir a diapositiva ${i + 1}`}
                   />
                 ))}
+
               </div>
+
             </section>
+
+
+            {/* =====================================================
+                BENEFICIOS
+            ===================================================== */}
 
             <div className="trust-bar">
+
               <div className="wrap trust-inner">
+
                 <div className="trust-item">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><path d="M12 3l7 3v6c0 4.5-3 8-7 9-4-1-7-4.5-7-9V6l7-3z" /><path d="M9 12l2 2 4-4" /></svg>
+
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.6"
+                  >
+                    <path d="M12 3l7 3v6c0 4.5-3 8-7 9-4-1-7-4.5-7-9V6l7-3z" />
+                    <path d="M9 12l2 2 4-4" />
+                  </svg>
+
                   <div>
                     <strong>3 años de garantía</strong>
-                    <span>Respaldo real en cada equipo que vendemos.</span>
+                    <span>
+                      Respaldo real en cada equipo que vendemos.
+                    </span>
                   </div>
+
                 </div>
+
+
                 <div className="trust-item">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><rect x="3" y="7" width="18" height="13" rx="2" /><path d="M3 7l9-4 9 4" /><path d="M12 12v8" /></svg>
+
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.6"
+                  >
+                    <rect
+                      x="3"
+                      y="7"
+                      width="18"
+                      height="13"
+                      rx="2"
+                    />
+                    <path d="M3 7l9-4 9 4" />
+                    <path d="M12 12v8" />
+                  </svg>
+
                   <div>
                     <strong>Insumos disponibles</strong>
-                    <span>Cartuchos y consumibles listos en Chile, sin depender del extranjero.</span>
+                    <span>
+                      Cartuchos y consumibles listos en Chile,
+                      sin depender del extranjero.
+                    </span>
                   </div>
+
                 </div>
+
+
                 <div className="trust-item">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><path d="M14.7 6.3a4 4 0 0 1-5.4 5.4L4 17v3h3l5.3-5.3a4 4 0 0 1 5.4-5.4z" /></svg>
+
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.6"
+                  >
+                    <path d="M14.7 6.3a4 4 0 0 1-5.4 5.4L4 17v3h3l5.3-5.3a4 4 0 0 1 5.4-5.4z" />
+                  </svg>
+
                   <div>
                     <strong>Servicio técnico</strong>
-                    <span>Soporte antes y después de la compra, con asesoría local.</span>
+                    <span>
+                      Soporte antes y después de la compra,
+                      con asesoría local.
+                    </span>
                   </div>
+
                 </div>
+
               </div>
+
             </div>
 
+
+            {/* =====================================================
+                FICHA TÉCNICA
+            ===================================================== */}
+
             <section className="wrap">
+
               <div className="section-head">
-                <div className="kicker">Ficha técnica</div>
-                <h2>Todo lo que necesitas para codificar en terreno.</h2>
-                <p>Una impresora pensada para producción, bodega y logística, sin depender de una toma de corriente.</p>
+
+                <div className="kicker">
+                  Ficha técnica
+                </div>
+
+                <h2>
+                  Todo lo que necesitas para codificar en terreno.
+                </h2>
+
+                <p>
+                  Una impresora pensada para producción,
+                  bodega y logística, sin depender de una
+                  toma de corriente.
+                </p>
+
               </div>
+
+
               <div className="cats">
+
                 <div className="cat">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><rect x="6" y="2" width="12" height="20" rx="2" /><path d="M10 6h4" /></svg>
+
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.6"
+                  >
+                    <rect
+                      x="6"
+                      y="2"
+                      width="12"
+                      height="20"
+                      rx="2"
+                    />
+                    <path d="M10 6h4" />
+                  </svg>
+
                   <h3>Batería de 8 horas</h3>
-                  <p>Uso continuo en campo, almacenes o líneas de producción, sin conexión eléctrica constante.</p>
+
+                  <p>
+                    Uso continuo en campo, almacenes o líneas
+                    de producción, sin conexión eléctrica constante.
+                  </p>
+
                 </div>
+
+
                 <div className="cat">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><rect x="3" y="5" width="18" height="14" rx="2" /><path d="M3 15h18" /></svg>
+
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.6"
+                  >
+                    <rect
+                      x="3"
+                      y="5"
+                      width="18"
+                      height="14"
+                      rx="2"
+                    />
+                    <path d="M3 15h18" />
+                  </svg>
+
                   <h3>Pantalla táctil 4.3"</h3>
-                  <p>Interfaz intuitiva compatible con 28 idiomas para operar en cualquier entorno.</p>
+
+                  <p>
+                    Interfaz intuitiva compatible con 28 idiomas
+                    para operar en cualquier entorno.
+                  </p>
+
                 </div>
+
+
                 <div className="cat">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><rect x="3" y="7" width="7" height="7" /><rect x="14" y="7" width="7" height="7" /><rect x="3" y="14" width="7" height="7" /></svg>
+
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.6"
+                  >
+                    <rect x="3" y="7" width="7" height="7" />
+                    <rect x="14" y="7" width="7" height="7" />
+                    <rect x="3" y="14" width="7" height="7" />
+                  </svg>
+
                   <h3>QR, códigos y fechas</h3>
-                  <p>Impresión variable de códigos QR, de barra, logotipos y texto sobre distintas superficies.</p>
+
+                  <p>
+                    Impresión variable de códigos QR, de barra,
+                    logotipos y texto sobre distintas superficies.
+                  </p>
+
                 </div>
+
+
                 <div className="cat">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><circle cx="12" cy="12" r="9" /><path d="M9 12l2 2 4-4" /></svg>
+
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.6"
+                  >
+                    <circle cx="12" cy="12" r="9" />
+                    <path d="M9 12l2 2 4-4" />
+                  </svg>
+
                   <h3>600 DPI, cartuchos libres</h3>
-                  <p>Resolución nítida a 3mm de distancia, con cartuchos de 12.7mm sin cifrado ni restricción de fabricante.</p>
+
+                  <p>
+                    Resolución nítida a 3mm de distancia,
+                    con cartuchos de 12.7mm sin cifrado
+                    ni restricción de fabricante.
+                  </p>
+
                 </div>
+
               </div>
+
             </section>
 
+
+            {/* =====================================================
+                EQUIPOS
+            ===================================================== */}
+
             <section className="wrap">
+
               <div className="section-head">
-                <div className="kicker">Equipos destacados</div>
-                <h2>Lo que vendemos, con la calidad que exige la industria.</h2>
-                <p>Equipos originales, listos para uso continuo en terreno.</p>
+
+                <div className="kicker">
+                  Equipos destacados
+                </div>
+
+                <h2>
+                  Lo que vendemos, con la calidad que exige la industria.
+                </h2>
+
+                <p>
+                  Equipos originales, listos para uso continuo en terreno.
+                </p>
+
               </div>
+
+
               <div className="products">
+
                 {products.map((p) => (
+
                   <button
                     key={p.id}
                     type="button"
                     className="product-card"
                     onClick={() => openProductPanel(p)}
                   >
-                    <img src={imageMap[p.cover]} alt={p.name} />
+
+                    <img
+                      src={imageMap[p.cover]}
+                      alt={p.name}
+                    />
+
                     <div className="product-info">
+
                       <h3>{p.name}</h3>
+
                       <p>{p.description}</p>
-                      <span className="product-more">Ver detalles y fotos →</span>
+
+                      <span className="product-more">
+                        Ver detalles y fotos →
+                      </span>
+
                     </div>
+
                   </button>
+
                 ))}
+
               </div>
+
             </section>
 
+
+            {/* =====================================================
+                INSUMOS
+            ===================================================== */}
+
             <section className="wrap">
+
               <div className="section-head">
-                <div className="kicker">Insumos</div>
-                <h2>Tintas y consumibles disponibles en Chile.</h2>
-                <p>Cartuchos listos para instalar, sin depender de compras al extranjero.</p>
+
+                <div className="kicker">
+                  Insumos
+                </div>
+
+                <h2>
+                  Tintas y consumibles disponibles en Chile.
+                </h2>
+
+                <p>
+                  Cartuchos listos para instalar, sin depender
+                  de compras al extranjero.
+                </p>
+
               </div>
+
+
               <div className="products supplies-grid">
+
                 {supplies.map((p) => (
+
                   <button
                     key={p.id}
                     type="button"
                     className="product-card"
                     onClick={() => openProductPanel(p)}
                   >
-                    <img src={imageMap[p.cover]} alt={p.name} />
+
+                    <img
+                      src={imageMap[p.cover]}
+                      alt={p.name}
+                    />
+
                     <div className="product-info">
+
                       <h3>{p.name}</h3>
+
                       <p>{p.description}</p>
-                      <span className="product-more">Ver detalles y fotos →</span>
+
+                      <span className="product-more">
+                        Ver detalles y fotos →
+                      </span>
+
                     </div>
+
                   </button>
+
                 ))}
+
               </div>
+
             </section>
+
           </>
         )}
 
+
+        {/* =====================================================
+            NOSOTROS
+        ===================================================== */}
+
         {tab === 'nosotros' && (
+
           <section className="wrap">
+
             <div className="section-head">
-              <div className="kicker">Nosotros</div>
-              <h2>Distribuidores de equipos de codificación industrial.</h2>
+
+              <div className="kicker">
+                Nosotros
+              </div>
+
+              <h2>
+                Distribuidores de equipos de codificación industrial.
+              </h2>
+
             </div>
+
+
             <div className="about-grid">
+
               <div>
+
                 <p>
-                  Nos especializamos en equipos de codificación e impresión
-                  industrial portátil, para empresas de manufactura, logística
-                  y envasado que necesitan marcar sus productos en terreno.
+                  Nos especializamos en equipos de codificación
+                  e impresión industrial portátil, para empresas
+                  de manufactura, logística y envasado que
+                  necesitan marcar sus productos en terreno.
                 </p>
+
                 <p>
-                  Trabajamos con proveedores certificados y ofrecemos asesoría técnica
-                  antes y después de la compra, incluyendo soporte para consumibles
-                  y mantención de los equipos.
+                  Trabajamos con proveedores certificados y ofrecemos
+                  asesoría técnica antes y después de la compra,
+                  incluyendo soporte para consumibles y mantención
+                  de los equipos.
                 </p>
+
+
                 <div className="stat-row">
-                  <div><strong>8h</strong><span>de batería continua</span></div>
-                  <div><strong>28</strong><span>idiomas soportados</span></div>
-                  <div><strong>600</strong><span>DPI de resolución</span></div>
+
+                  <div>
+                    <strong>8h</strong>
+                    <span>de batería continua</span>
+                  </div>
+
+                  <div>
+                    <strong>28</strong>
+                    <span>idiomas soportados</span>
+                  </div>
+
+                  <div>
+                    <strong>600</strong>
+                    <span>DPI de resolución</span>
+                  </div>
+
                 </div>
+
               </div>
+
+
               <div className="values">
+
                 <div className="value">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><path d="M12 3l7 3v6c0 4.5-3 8-7 9-4-1-7-4.5-7-9V6l7-3z" /><path d="M9 12l2 2 4-4" /></svg>
-                  <div><h3>3 años de garantía</h3><p>Respaldo real en cada equipo, no solo en el momento de la venta.</p></div>
+
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.6"
+                  >
+                    <path d="M12 3l7 3v6c0 4.5-3 8-7 9-4-1-7-4.5-7-9V6l7-3z" />
+                    <path d="M9 12l2 2 4-4" />
+                  </svg>
+
+                  <div>
+                    <h3>3 años de garantía</h3>
+                    <p>
+                      Respaldo real en cada equipo,
+                      no solo en el momento de la venta.
+                    </p>
+                  </div>
+
                 </div>
+
+
                 <div className="value">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><rect x="3" y="7" width="18" height="13" rx="2" /><path d="M3 7l9-4 9 4" /><path d="M12 12v8" /></svg>
-                  <div><h3>Insumos disponibles en Chile</h3><p>Cartuchos y consumibles sin depender de compras al extranjero.</p></div>
+
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.6"
+                  >
+                    <rect
+                      x="3"
+                      y="7"
+                      width="18"
+                      height="13"
+                      rx="2"
+                    />
+                    <path d="M3 7l9-4 9 4" />
+                    <path d="M12 12v8" />
+                  </svg>
+
+                  <div>
+                    <h3>Insumos disponibles en Chile</h3>
+                    <p>
+                      Cartuchos y consumibles sin depender
+                      de compras al extranjero.
+                    </p>
+                  </div>
+
                 </div>
+
+
                 <div className="value">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><path d="M14.7 6.3a4 4 0 0 1-5.4 5.4L4 17v3h3l5.3-5.3a4 4 0 0 1 5.4-5.4z" /></svg>
-                  <div><h3>Servicio técnico</h3><p>Asesoría personalizada antes y después de la compra, con soporte local.</p></div>
+
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.6"
+                  >
+                    <path d="M14.7 6.3a4 4 0 0 1-5.4 5.4L4 17v3h3l5.3-5.3a4 4 0 0 1 5.4-5.4z" />
+                  </svg>
+
+                  <div>
+                    <h3>Servicio técnico</h3>
+                    <p>
+                      Asesoría personalizada antes y después
+                      de la compra, con soporte local.
+                    </p>
+                  </div>
+
                 </div>
+
               </div>
+
             </div>
+
           </section>
+
         )}
+
+
+        {/* =====================================================
+            CONTACTO
+        ===================================================== */}
 
         {tab === 'contacto' && (
+
           <section className="wrap">
+
             <div className="section-head">
-              <div className="kicker">Contacto</div>
-              <h2>Escríbenos o llámanos.</h2>
+
+              <div className="kicker">
+                Contacto
+              </div>
+
+              <h2>
+                Escríbenos o llámanos.
+              </h2>
+
             </div>
+
+
             <ul className="info-list">
+
               <li>
+
                 <div className="icon-badge">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.4 2.1L8.1 9.7a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.4c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2.2z" /></svg>
+
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.6"
+                  >
+                    <path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.4 2.1L8.1 9.7a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.4c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2.2z" />
+                  </svg>
+
                 </div>
+
                 <div>
                   <strong>Teléfono</strong>
-                  <a href="tel:+56998920709">+56 9 9892 0709</a>
+
+                  <a href="tel:+56998920709">
+                    +56 9 9892 0709
+                  </a>
                 </div>
+
               </li>
+
+
               <li>
+
                 <div className="icon-badge">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><path d="M4 4h16v16H4z" /><path d="M4 6l8 7 8-7" /></svg>
+
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.6"
+                  >
+                    <path d="M4 4h16v16H4z" />
+                    <path d="M4 6l8 7 8-7" />
+                  </svg>
+
                 </div>
+
                 <div>
                   <strong>Correo</strong>
-                  <a href="mailto:contacto@codexpressglobal.cl">contacto@codexpressglobal.cl</a>
+
+                  <a href="mailto:contacto@codexpressglobal.cl">
+                    contacto@codexpressglobal.cl
+                  </a>
                 </div>
+
               </li>
+
             </ul>
+
           </section>
+
         )}
+
       </main>
 
+
+      {/* =====================================================
+          FOOTER
+      ===================================================== */}
+
       <footer>
+
         <div className="wrap foot-inner">
-          <div>© 2026 · Todos los derechos reservados.</div>
-        </div>
-      </footer>
-
-      {openProduct && (
-        <div className="product-overlay" onClick={closeProductPanel}>
-          <div className="product-panel" onClick={(e) => e.stopPropagation()}>
-            <button className="product-close" onClick={closeProductPanel} aria-label="Cerrar">✕</button>
-
-            <div className="product-panel-gallery">
-              <div className="panel-main-photo">
-                <img
-                  src={imageMap[openProduct.gallery[activePhoto]]}
-                  alt={openProduct.name}
-                />
-              </div>
-              {openProduct.gallery.length > 1 && (
-                <div className="panel-thumbs">
-                  {openProduct.gallery.map((imgKey, i) => (
-                    <button
-                      key={imgKey}
-                      className={i === activePhoto ? 'thumb active' : 'thumb'}
-                      onClick={() => setActivePhoto(i)}
-                      aria-label={`Ver foto ${i + 1}`}
-                    >
-                      <img src={imageMap[imgKey]} alt="" />
-                    </button>
-                  ))}
-                </div>
-              )}
-            </div>
-
-            <div className="product-panel-info">
-              <h2>{openProduct.name}</h2>
-              <p>{openProduct.description}</p>
-              <div className="panel-specs">
-                <div>
-                  <span>Tipo</span>
-                  <strong>{openProduct.tipo}</strong>
-                </div>
-                <div>
-                  <span>Tecnología</span>
-                  <strong>{openProduct.tecnologia}</strong>
-                </div>
-              </div>
-
-              {openProduct.specStrip && (
-                <div className="panel-spec-strip">
-                  {openProduct.specStrip.map((s) => (
-                    <div key={s.label}>
-                      <strong>{s.value}</strong>
-                      <span>{s.label}</span>
-                    </div>
-                  ))}
-                </div>
-              )}
-
-              {openProduct.galleryDetails && (
-                <div className="panel-gallery-grid">
-                  {openProduct.galleryDetails.map((d) => (
-                    <figure key={d.title} className="media-card">
-                      <div className={d.contain ? 'media media-contain' : 'media'}>
-                        <img src={imageMap[d.img]} alt={d.title} />
-                      </div>
-                      <figcaption>
-                        <h3>{d.title}</h3>
-                        <p>{d.text}</p>
-                      </figcaption>
-                    </figure>
-                  ))}
-                </div>
-              )}
-
-              <a className="panel-cta" href="https://wa.me/56998920709" target="_blank" rel="noreferrer">
-                Consultar por WhatsApp
-              </a>
-            </div>
+          <div>
+            © 2026 · Todos los derechos reservados.
           </div>
         </div>
+
+      </footer>
+
+
+      {/* =====================================================
+          MODAL / DETALLE PRODUCTO
+      ===================================================== */}
+
+      {openProduct && (
+
+        <div
+          className="product-overlay"
+          onClick={closeProductPanel}
+        >
+
+          <div
+            className="product-panel"
+            onClick={(e) => e.stopPropagation()}
+          >
+
+            <button
+              className="product-close"
+              onClick={closeProductPanel}
+              aria-label="Cerrar"
+            >
+              ✕
+            </button>
+
+
+            {/* GALERÍA */}
+
+            <div className="product-panel-gallery">
+
+              <div className="panel-main-photo">
+
+                <img
+                  src={
+                    imageMap[
+                      openProduct.gallery[activePhoto]
+                    ]
+                  }
+                  alt={openProduct.name}
+                />
+
+              </div>
+
+
+              {openProduct.gallery.length > 1 && (
+
+                <div className="panel-thumbs">
+
+                  {openProduct.gallery.map(
+                    (imgKey, i) => (
+
+                      <button
+                        key={imgKey}
+                        className={
+                          i === activePhoto
+                            ? 'thumb active'
+                            : 'thumb'
+                        }
+                        onClick={() =>
+                          setActivePhoto(i)
+                        }
+                        aria-label={`Ver foto ${i + 1}`}
+                      >
+
+                        <img
+                          src={imageMap[imgKey]}
+                          alt=""
+                        />
+
+                      </button>
+
+                    )
+                  )}
+
+                </div>
+
+              )}
+
+            </div>
+
+
+            {/* INFORMACIÓN */}
+
+            <div className="product-panel-info">
+
+              <h2>
+                {openProduct.name}
+              </h2>
+
+              <p>
+                {openProduct.description}
+              </p>
+
+
+              <div className="panel-specs">
+
+                <div>
+                  <span>Tipo</span>
+                  <strong>
+                    {openProduct.tipo}
+                  </strong>
+                </div>
+
+                <div>
+                  <span>Tecnología</span>
+                  <strong>
+                    {openProduct.tecnologia}
+                  </strong>
+                </div>
+
+              </div>
+
+
+              {/* ESPECIFICACIONES */}
+
+              {openProduct.specStrip && (
+
+                <div className="panel-spec-strip">
+
+                  {openProduct.specStrip.map(
+                    (s) => (
+
+                      <div key={s.label}>
+
+                        <strong>
+                          {s.value}
+                        </strong>
+
+                        <span>
+                          {s.label}
+                        </span>
+
+                      </div>
+
+                    )
+                  )}
+
+                </div>
+
+              )}
+
+
+              {/* GALERÍA DETALLADA */}
+
+              {openProduct.galleryDetails && (
+
+                <div className="panel-gallery-grid">
+
+                  {openProduct.galleryDetails.map(
+                    (d) => (
+
+                      <figure
+                        key={d.title}
+                        className="media-card"
+                      >
+
+                        <div
+                          className={
+                            d.contain
+                              ? 'media media-contain'
+                              : 'media'
+                          }
+                        >
+
+                          <img
+                            src={imageMap[d.img]}
+                            alt={d.title}
+                          />
+
+                        </div>
+
+
+                        <figcaption>
+
+                          <h3>
+                            {d.title}
+                          </h3>
+
+                          <p>
+                            {d.text}
+                          </p>
+
+                        </figcaption>
+
+                      </figure>
+
+                    )
+                  )}
+
+                </div>
+
+              )}
+
+
+              <a
+                className="panel-cta"
+                href="https://wa.me/56998920709"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Consultar por WhatsApp
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
       )}
+
     </div>
   )
 }
