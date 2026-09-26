@@ -33,6 +33,7 @@ import cartucho127Img2 from './assets/hero/cartucho-12-7/cartucho_12_7mm_02.png'
 import cartucho127Img3 from './assets/hero/cartucho-12-7/cartucho_12_7mm_03.png'
 import cartucho127Img4 from './assets/hero/cartucho-12-7/cartucho_12_7mm_04.png'
   
+
 // ===== SLIDES HERO =====
 const slides = [
   {
