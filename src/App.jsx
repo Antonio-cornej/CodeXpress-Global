@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './App.css'
-import logoImg from './assets/logo-codexpress.png'
+import logoImg from './assets/logo-codexpress.jpg'
 
 // ===== IMÁGENES: IMPRESORA PRINCIPAL =====
 import printerImg from './assets/hero/printer.jpg'
