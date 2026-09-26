@@ -27,6 +27,7 @@ import cartuchoComponentesImg from './assets/hero/cartridge.jpg'
 import cartuchoAplicacionesImg from './assets/hero/cartridge.jpg'
 import cartuchoPack3Img from './assets/hero/cartridge.jpg'
 
+
 // ===== IMÁGENES: CARTUCHO 12.7 MM =====
 import cartucho127Img1 from './assets/hero/cartucho_12_7mm_01.png'
 import cartucho127Img2 from './assets/hero/cartucho_12_7mm_02.png'
