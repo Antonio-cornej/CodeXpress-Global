@@ -27,9 +27,49 @@ const slides = [
   },
 ]
 
+const products = [
+  {
+    id: 'impresora',
+    category: 'equipo',
+    name: 'Impresora de inyección de tinta portátil',
+    tipo: 'Impresora portátil',
+    tecnologia: 'Inyección de tinta',
+    description:
+      'Equipo portátil para marcar fechas de vencimiento, códigos QR, códigos de barra y logotipos sobre botellas plásticas, vidrio, piezas metálicas y tuberías de acero. Pantalla táctil de 4.3", batería para toda la jornada y resolución de hasta 600 DPI, con impresión nítida a solo 3 mm de distancia.',
+    cover: 'printerImg',
+    gallery: ['printerImg', 'perfilImg', 'dimensionesImg', 'idiomasImg', 'usosImg', 'materialesImg', 'unboxingImg'],
+  },
+]
+
+const supplies = [
+  {
+    id: 'cartucho',
+    category: 'insumo',
+    name: 'Cartucho de tinta',
+    tipo: 'Consumible',
+    tecnologia: 'Tinta eco-solvente',
+    description:
+      'Cartucho compatible con la línea de impresoras portátiles, formulado para alta adherencia y secado rápido. Formato compacto de 12.7 mm, listo para instalar y sin restricciones de fabricante.',
+    cover: 'cartridgeImg',
+    gallery: ['cartridgeImg'],
+  },
+]
+
 function App() {
   const [tab, setTab] = useState('inicio')
   const [slide, setSlide] = useState(0)
+  const [openProduct, setOpenProduct] = useState(null)
+  const [activePhoto, setActivePhoto] = useState(0)
+
+  const imageMap = {
+    printerImg, cartridgeImg, perfilImg, dimensionesImg, idiomasImg, usosImg, materialesImg, unboxingImg,
+  }
+
+  const openProductPanel = (product) => {
+    setOpenProduct(product)
+    setActivePhoto(0)
+  }
+  const closeProductPanel = () => setOpenProduct(null)
 
   const nextSlide = () => setSlide((s) => (s + 1) % slides.length)
   const prevSlide = () => setSlide((s) => (s - 1 + slides.length) % slides.length)
@@ -203,36 +243,51 @@ function App() {
 
             <section className="wrap">
               <div className="section-head">
-                <div className="kicker">Productos</div>
+                <div className="kicker">Equipos destacados</div>
                 <h2>Lo que vendemos, con la calidad que exige la industria.</h2>
-                <p>Equipos y consumibles originales Yaomatec, listos para uso continuo en terreno.</p>
+                <p>Equipos originales, listos para uso continuo en terreno.</p>
               </div>
               <div className="products">
-                <div className="product-card">
-                  <img src={printerImg} alt="Impresora portátil Yaomatec" />
-                  <div className="product-info">
-                    <h3>Impresora de inyección de tinta portátil</h3>
-                    <p>
-                      Equipo portátil para marcar fechas de vencimiento, códigos QR, códigos
-                      de barra y logotipos sobre botellas plásticas, vidrio, piezas metálicas
-                      y tuberías de acero. Pantalla táctil de 4.3", batería para toda la
-                      jornada y resolución de hasta 600 DPI, con impresión nítida a solo 3 mm
-                      de distancia.
-                    </p>
-                  </div>
-                </div>
-                <div className="product-card">
-                  <img src={cartridgeImg} alt="Cartucho de tinta Yaomatec W3T10B" />
-                  <div className="product-info">
-                    <h3>Cartucho de tinta</h3>
-                    <p>
-                      Cartucho compatible con la línea de impresoras portátiles Yaomatec,
-                      formulado para alta adherencia y secado rápido. Tinta eco-solvente,
-                      en formato compacto de 12.7 mm, listo para instalar y sin
-                      restricciones de fabricante.
-                    </p>
-                  </div>
-                </div>
+                {products.map((p) => (
+                  <button
+                    key={p.id}
+                    type="button"
+                    className="product-card"
+                    onClick={() => openProductPanel(p)}
+                  >
+                    <img src={imageMap[p.cover]} alt={p.name} />
+                    <div className="product-info">
+                      <h3>{p.name}</h3>
+                      <p>{p.description}</p>
+                      <span className="product-more">Ver detalles y fotos →</span>
+                    </div>
+                  </button>
+                ))}
+              </div>
+            </section>
+
+            <section className="wrap">
+              <div className="section-head">
+                <div className="kicker">Insumos</div>
+                <h2>Tintas y consumibles disponibles en Chile.</h2>
+                <p>Cartuchos listos para instalar, sin depender de compras al extranjero.</p>
+              </div>
+              <div className="products supplies-grid">
+                {supplies.map((p) => (
+                  <button
+                    key={p.id}
+                    type="button"
+                    className="product-card"
+                    onClick={() => openProductPanel(p)}
+                  >
+                    <img src={imageMap[p.cover]} alt={p.name} />
+                    <div className="product-info">
+                      <h3>{p.name}</h3>
+                      <p>{p.description}</p>
+                      <span className="product-more">Ver detalles y fotos →</span>
+                    </div>
+                  </button>
+                ))}
               </div>
             </section>
           </>
@@ -315,6 +370,55 @@ function App() {
           <div>© 2026 · Todos los derechos reservados.</div>
         </div>
       </footer>
+
+      {openProduct && (
+        <div className="product-overlay" onClick={closeProductPanel}>
+          <div className="product-panel" onClick={(e) => e.stopPropagation()}>
+            <button className="product-close" onClick={closeProductPanel} aria-label="Cerrar">✕</button>
+
+            <div className="product-panel-gallery">
+              <div className="panel-main-photo">
+                <img
+                  src={imageMap[openProduct.gallery[activePhoto]]}
+                  alt={openProduct.name}
+                />
+              </div>
+              {openProduct.gallery.length > 1 && (
+                <div className="panel-thumbs">
+                  {openProduct.gallery.map((imgKey, i) => (
+                    <button
+                      key={imgKey}
+                      className={i === activePhoto ? 'thumb active' : 'thumb'}
+                      onClick={() => setActivePhoto(i)}
+                      aria-label={`Ver foto ${i + 1}`}
+                    >
+                      <img src={imageMap[imgKey]} alt="" />
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            <div className="product-panel-info">
+              <h2>{openProduct.name}</h2>
+              <p>{openProduct.description}</p>
+              <div className="panel-specs">
+                <div>
+                  <span>Tipo</span>
+                  <strong>{openProduct.tipo}</strong>
+                </div>
+                <div>
+                  <span>Tecnología</span>
+                  <strong>{openProduct.tecnologia}</strong>
+                </div>
+              </div>
+              <a className="panel-cta" href="https://wa.me/56998920709" target="_blank" rel="noreferrer">
+                Consultar por WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   )
 }
