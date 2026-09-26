@@ -9,7 +9,7 @@ import usosImg from './assets/hero/producto_usos_azul_1.png'
 import materialesImg from './assets/hero/producto_materiales_grid.png'
 import unboxingImg from './assets/hero/producto_unboxing_oficial.png'
 import xpbFrontalImg from './assets/hero/producto_frontal_limpio.png'
-import cartuchoBk127Img from './assets/hero/PLACEHOLDER_cartucho_bk127_frontal.png'
+import cartuchoBk127Img from './assets/hero/cartridge.jpg'
 
 const slides = [
   {
