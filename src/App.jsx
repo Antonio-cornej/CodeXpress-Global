@@ -18,13 +18,19 @@ import xpbMaterialesImg from './assets/hero/producto_materiales_variados.png'
 import xpbDistanciaImg from './assets/hero/producto_distancia_idiomas_dpi.png'
 import xpbAccesoriosImg from './assets/hero/producto_incluye_accesorios.png'
 
-// ===== IMÁGENES: CARTUCHO DE TINTA =====
+// ===== IMÁGENES: CARTUCHO NEGRO 42ML =====
 import cartuchoDetallesImg from './assets/hero/cartucho_detalles.png'
 import cartuchoAguaImg from './assets/hero/cartucho_resistente_agua.png'
 import cartuchoParametrosImg from './assets/hero/cartucho_parametros.png'
 import cartuchoComponentesImg from './assets/hero/cartucho_detalle_componentes.png'
 import cartuchoAplicacionesImg from './assets/hero/cartucho_aplicaciones.png'
 import cartuchoPack3Img from './assets/hero/cartucho_pack_3.png'
+
+// ===== IMÁGENES: CARTUCHO 12.7 MM =====
+import cartucho127Img1 from './assets/hero/cartucho_12_7mm_01.png'
+import cartucho127Img2 from './assets/hero/cartucho_12_7mm_02.png'
+import cartucho127Img3 from './assets/hero/cartucho_12_7mm_03.png'
+import cartucho127Img4 from './assets/hero/cartucho_12_7mm_04.png'
 
 // ===== SLIDES HERO =====
 const slides = [
@@ -109,9 +115,22 @@ const supplies = [
     tipo: 'Consumible',
     tecnologia: 'Tinta eco-solvente',
     description:
-      'Cartucho compatible con la línea de impresoras portátiles, formulado para alta adherencia y secado rápido. Formato compacto de 12.7 mm, listo para instalar y sin restricciones de fabricante.',
+      'Cartucho de tinta para impresora de inyección de tinta portátil, formulado para alta adherencia y secado rápido. Utiliza tinta ecosolvente y cuenta con un cabezal de 12.7 mm. Compatible con impresoras sin cifrado y diseñado para obtener una impresión clara, precisa y estable.',
     cover: 'cartridgeImg',
-    gallery: ['cartridgeImg'],
+    gallery: ['cartridgeImg', 'cartucho127Img1', 'cartucho127Img2', 'cartucho127Img3', 'cartucho127Img4'],
+    specStrip: [
+      { label: 'Cabezal', value: '12.7 mm' },
+      { label: 'Tinta', value: 'Ecosolvente' },
+      { label: 'Secado', value: 'Rápido' },
+      { label: 'Adherencia', value: 'Alta' },
+      { label: 'Compatibilidad', value: 'Sin cifrado' },
+    ],
+    galleryDetails: [
+      { img: 'cartucho127Img1', title: 'Cartucho de tinta 12.7 mm', text: 'Cartucho compacto para impresoras de inyección de tinta portátil, diseñado para una impresión clara y estable.', contain: true },
+      { img: 'cartucho127Img2', title: 'Sistema de impresión', text: 'Diseño preparado para una instalación sencilla en impresoras portátiles compatibles.', contain: true },
+      { img: 'cartucho127Img3', title: 'Diseño compacto', text: 'Formato compacto de 12.7 mm para equipos de impresión portátil.', contain: true },
+      { img: 'cartucho127Img4', title: 'Boquilla de alta precisión', text: 'Cabezal diseñado para obtener una impresión clara, precisa y estable.', contain: true },
+    ],
   },
   {
     id: 'cartucho-negro',
@@ -151,6 +170,7 @@ function App() {
     printerImg, cartridgeImg, perfilImg, dimensionesImg, idiomasImg, usosImg, materialesImg, unboxingImg,
     xpbFrontalImg, xpbContenidosImg, xpbMaterialesImg, xpbDistanciaImg, xpbAccesoriosImg,
     cartuchoDetallesImg, cartuchoAguaImg, cartuchoParametrosImg, cartuchoComponentesImg, cartuchoAplicacionesImg, cartuchoPack3Img,
+    cartucho127Img1, cartucho127Img2, cartucho127Img3, cartucho127Img4,
   }
 
   const openProductPanel = (product) => {
